@@ -11,7 +11,8 @@ config_version=5
 [application]
 
 config/name="2025 GMTK game jam"
-config/features=PackedStringArray("4.4", "Forward Plus")
+run/main_scene="uid://babj2g1w3tbsn"
+config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]
