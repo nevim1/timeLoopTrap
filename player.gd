@@ -8,7 +8,7 @@ const inputs = {
 	"moveUp": Vector2.UP
 }
 
-# Stores the grid size, which is 16 (same as one tile)
+# Stores the grid size, which is 32 (same as one tile)
 var grid_size = 32
 
 # Reference to the RayCast2D node
