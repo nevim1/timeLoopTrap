@@ -1,7 +1,9 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://neku2qaay4mt"]
+[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://neku2qaay4mt"]
 
 [ext_resource type="Texture2D" uid="uid://co6otxooslo1r" path="res://assets/tileMap.png" id="1_m0wxs"]
 [ext_resource type="PackedScene" uid="uid://4lds8fep607y" path="res://box.tscn" id="2_hhvbn"]
+[ext_resource type="PackedScene" uid="uid://bphwnm0fjwu0v" path="res://player_plate.tscn" id="2_t7fou"]
+[ext_resource type="PackedScene" uid="uid://n16kvlssq2ql" path="res://door.tscn" id="4_2edxk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_abirl"]
 texture = ExtResource("1_m0wxs")
@@ -75,7 +77,9 @@ texture_region_size = Vector2i(32, 32)
 7:7/0 = 0
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_g2hbc"]
+scenes/1/scene = ExtResource("2_t7fou")
 scenes/2/scene = ExtResource("2_hhvbn")
+scenes/3/scene = ExtResource("4_2edxk")
 
 [resource]
 tile_size = Vector2i(32, 32)
