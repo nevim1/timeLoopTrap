@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://babj2g1w3tbsn"]
+[gd_scene load_steps=6 format=4 uid="uid://babj2g1w3tbsn"]
 
 [ext_resource type="TileSet" uid="uid://neku2qaay4mt" path="res://testTileSet.tres" id="1_dm1bw"]
 [ext_resource type="Script" uid="uid://drx8ntmviaf3t" path="res://level.gd" id="1_g1wnu"]
 [ext_resource type="PackedScene" uid="uid://3pk5xiwwd52k" path="res://Player.tscn" id="1_vuk21"]
 [ext_resource type="PackedScene" uid="uid://bb0u070prx84x" path="res://ui.tscn" id="3_dxh5b"]
+[ext_resource type="Script" uid="uid://c58fl4hatiuym" path="res://ui.gd" id="5_pb1bd"]
 
 [node name="level" type="Node2D"]
 script = ExtResource("1_g1wnu")
@@ -18,3 +19,4 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAA
 tile_set = ExtResource("1_dm1bw")
 
 [node name="UI" parent="." instance=ExtResource("3_dxh5b")]
+script = ExtResource("5_pb1bd")
