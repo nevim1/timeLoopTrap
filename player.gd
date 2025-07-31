@@ -10,7 +10,8 @@ const inputs = {
 
 # Stores the grid size, which is 32 (same as one tile)
 var grid_size = 32
-
+var current_loop: bool = true
+signal step
 # Reference to the RayCast2D node
 @onready var ray_cast_2d: RayCast2D = $RayCast2D
 
@@ -24,8 +25,10 @@ func _unhandled_input(event):
 # Updates the direction of the RayCast2D according to the input key
 # and moves one grid if no collision is detected
 func move(action):
-	var destination = inputs[action] * grid_size
-	ray_cast_2d.target_position = destination
-	ray_cast_2d.force_raycast_update()
-	if not ray_cast_2d.is_colliding():
-		position += destination
+	if current_loop == true :
+		var destination = inputs[action] * grid_size
+		ray_cast_2d.target_position = destination
+		ray_cast_2d.force_raycast_update()
+		if not ray_cast_2d.is_colliding():
+			position += destination
+			step.emit(1)

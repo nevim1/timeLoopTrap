@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://bb0u070prx84x"]
+[gd_scene load_steps=2 format=3 uid="uid://bb0u070prx84x"]
+
+[ext_resource type="Script" uid="uid://ct2sxrgabiviu" path="res://steps_counter.gd" id="1_fyqef"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -8,8 +10,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="."]
+[node name="Steps" type="Label" parent="."]
 layout_mode = 1
 offset_right = 81.0
 offset_bottom = 23.0
 text = "Steps left: "
+script = ExtResource("1_fyqef")
