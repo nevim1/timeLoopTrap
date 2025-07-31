@@ -15,6 +15,7 @@ var grid_size = 32
 # Reference to the RayCast2D node
 @onready var ray_cast_2d: RayCast2D = $PlayerRaycast
 
+@export var push_limit = -1
 
 # Updates the direction of the RayCast2D according to the input key
 # and moves one grid if no collision is detected
@@ -28,12 +29,15 @@ func move(action, reverse:bool):
 	ray_cast_2d.force_raycast_update()
 	if not ray_cast_2d.is_colliding():
 		position += destination
-		#return true
 	elif ray_cast_2d.get_collision_mask_value(2) : 
-		print("BOX!")
 		var movable = ray_cast_2d.get_collider()
-		position += destination
-		movable.position += destination
+		if 'move' in movable:
+			if movable.move(destination, push_limit):
+				position += destination
+			else: 
+				return false
+		else: 
+			return false
 	else:
 		return false
 	return true
