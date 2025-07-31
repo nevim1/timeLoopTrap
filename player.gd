@@ -31,7 +31,7 @@ func move(action, reverse:bool):
 		#return true
 	elif ray_cast_2d.get_collision_mask_value(2) : 
 		print("BOX!")
-		var movable = $RayCast2D.get_collider()
+		var movable = ray_cast_2d.get_collider()
 		position += destination
 		movable.position += destination
 	else:
