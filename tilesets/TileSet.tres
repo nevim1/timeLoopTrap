@@ -1,11 +1,11 @@
 [gd_resource type="TileSet" load_steps=9 format=3 uid="uid://neku2qaay4mt"]
 
 [ext_resource type="Texture2D" uid="uid://co6otxooslo1r" path="res://assets/tileMap.png" id="1_m0wxs"]
-[ext_resource type="PackedScene" uid="uid://bphwnm0fjwu0v" path="res://scenes/player_plate.tscn" id="2_t7fou"]
 [ext_resource type="PackedScene" uid="uid://4lds8fep607y" path="res://scenes/box.tscn" id="2_hhvbn"]
+[ext_resource type="PackedScene" uid="uid://bphwnm0fjwu0v" path="res://scenes/player_plate.tscn" id="2_t7fou"]
 [ext_resource type="PackedScene" uid="uid://n16kvlssq2ql" path="res://scenes/door.tscn" id="4_2edxk"]
-[ext_resource type="PackedScene" uid="uid://i5osvdp71ysm" path="res://scenes/finish_line.tscn" id="5_k8lel"]
-[ext_resource type="PackedScene" uid="uid://dlthspcp6ibil" path="res://scenes/spawner.tscn" id="6_s4r4k"]
+[ext_resource type="PackedScene" path="res://scenes/finish_line.tscn" id="5_k8lel"]
+[ext_resource type="PackedScene" path="res://scenes/spawner.tscn" id="6_s4r4k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_abirl"]
 texture = ExtResource("1_m0wxs")
