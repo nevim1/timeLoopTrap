@@ -13,7 +13,7 @@ const inputs = {
 var grid_size = 32
 
 # Reference to the RayCast2D node
-@onready var ray_cast_2d: RayCast2D = $RayCast2D
+@onready var ray_cast_2d: RayCast2D = $PlayerRaycast
 
 
 # Updates the direction of the RayCast2D according to the input key
@@ -28,11 +28,12 @@ func move(action, reverse:bool):
 	ray_cast_2d.force_raycast_update()
 	if not ray_cast_2d.is_colliding():
 		position += destination
-		return true
+		#return true
 	elif ray_cast_2d.get_collision_mask_value(2) : 
 		print("BOX!")
-		#var movable = $Player/RayCast2D.get_collider()
-		#position += destination
-		#movable.position += destination
-	
-	return false
+		var movable = $RayCast2D.get_collider()
+		position += destination
+		movable.position += destination
+	else:
+		return false
+	return true

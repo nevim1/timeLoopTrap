@@ -17,11 +17,6 @@ func _ready():
 	step.connect(ui_steps_node.update_steps)
 	
 	step.emit(remaining_steps)
-	
-	print(InputMap.get_actions())
-	
-	#for i in InputMap:
-	#	print(i)
 
 # A dictionary that maps input map actions to direction vectors
 const inputs = {
@@ -39,6 +34,7 @@ func _unhandled_input(event):
 		return
 		
 	if event.is_action_pressed("reset_level"):
+		print('level was reset')
 		get_tree().reload_current_scene()
 		
 	elif event.is_action_pressed("undo"):
