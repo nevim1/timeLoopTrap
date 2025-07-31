@@ -26,15 +26,18 @@ const inputs = {
 # Calls the move function with the appropriate input key
 # if any input map action is triggered
 func _unhandled_input(event):
+	if event.is_action_pressed("reset_level"):
+		get_tree().reload_current_scene()
+	if remaining_steps == 0:
+		return
 	if event.is_action_pressed("wait"):
 		on_step_taken()
 		step.emit(remaining_steps)
 	for action in inputs.keys():
 		if event.is_action_pressed(action):
-			if remaining_steps >= 0:
-				if player_node.move(action):
-					on_step_taken()
-					step.emit(remaining_steps)
+			if player_node.move(action):
+				on_step_taken()
+				step.emit(remaining_steps)
 
 
 func on_step_taken():
