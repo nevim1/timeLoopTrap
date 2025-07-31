@@ -2,10 +2,10 @@ extends CharacterBody2D
 
 # A dictionary that maps input map actions to direction vectors
 const inputs = {
-	"moveRight": Vector2.RIGHT,
-	"moveLeft": Vector2.LEFT,
-	"moveDown": Vector2.DOWN,
-	"moveUp": Vector2.UP
+	"move_right": Vector2.RIGHT,
+	"move_left": Vector2.LEFT,
+	"move_down": Vector2.DOWN,
+	"move_up": Vector2.UP
 }
 
 # Stores the grid size, which is 32 (same as one tile)
