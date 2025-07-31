@@ -7,4 +7,3 @@ func _ready():
 
 func update_steps(vaulue):
 	stepLabel.text = 'Steps left: ' + str(vaulue)
-	print(vaulue)

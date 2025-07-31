@@ -5,6 +5,9 @@ extends Node2D
 var player_node
 var ui_steps_node
 
+var last_steps = []
+var last_step = null
+
 signal step
 
 func _ready():
@@ -14,37 +17,52 @@ func _ready():
 	step.connect(ui_steps_node.update_steps)
 	
 	step.emit(remaining_steps)
+	
+	print(InputMap.get_actions())
+	
+	#for i in InputMap:
+	#	print(i)
 
 # A dictionary that maps input map actions to direction vectors
 const inputs = {
 	"move_right": Vector2.RIGHT,
 	"move_left": Vector2.LEFT,
 	"move_down": Vector2.DOWN,
-	"move_up": Vector2.UP
+	"move_up": Vector2.UP,
+	"wait": Vector2.ZERO
 }
 
 # Calls the move function with the appropriate input key
 # if any input map action is triggered
 func _unhandled_input(event):
+	if not event.is_action_type():
+		return
+		
 	if event.is_action_pressed("reset_level"):
 		get_tree().reload_current_scene()
-	if remaining_steps == 0:
-		return
-	if event.is_action_pressed("wait"):
-		on_step_taken()
-		step.emit(remaining_steps)
-	for action in inputs.keys():
-		if event.is_action_pressed(action):
-			if player_node.move(action):
-				on_step_taken()
-				step.emit(remaining_steps)
+		
+	elif event.is_action_pressed("undo"):
+		last_step = last_steps.pop_back()
+		if last_step != null:
+			for action in inputs.keys():
+				if last_step.is_action_pressed(action):
+					if player_node.move(action, true):
+						remaining_steps += 1
+						step.emit(remaining_steps)
 
+	elif remaining_steps == 0:
+		pass
+	else:
+		for action in inputs.keys():
+			if event.is_action_pressed(action):
+				if player_node.move(action, false):
+					last_steps.append(event)
+					remaining_steps -= 1
+					step.emit(remaining_steps)
 
-func on_step_taken():
-	remaining_steps -= 1
 
 func on_loop_ended():
-	remaining_loops -= 1 
+	remaining_loops -= 1
 	if remaining_loops == 0 :
 		on_loops_depleted()
 

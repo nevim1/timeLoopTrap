@@ -5,12 +5,12 @@ const inputs = {
 	"move_right": Vector2.RIGHT,
 	"move_left": Vector2.LEFT,
 	"move_down": Vector2.DOWN,
-	"move_up": Vector2.UP
+	"move_up": Vector2.UP,
+	"wait": Vector2.ZERO
 }
 
 # Stores the grid size, which is 32 (same as one tile)
 var grid_size = 32
-var current_loop: bool = true
 
 # Reference to the RayCast2D node
 @onready var ray_cast_2d: RayCast2D = $RayCast2D
@@ -18,12 +18,15 @@ var current_loop: bool = true
 
 # Updates the direction of the RayCast2D according to the input key
 # and moves one grid if no collision is detected
-func move(action):
-	if current_loop == true :
-		var destination = inputs[action] * grid_size
-		ray_cast_2d.target_position = destination
-		ray_cast_2d.force_raycast_update()
-		if not ray_cast_2d.is_colliding():
-			position += destination
-			return true
-		return false
+func move(action, reverse:bool):
+	var direction = 1
+	if reverse:
+		direction *= -1
+		
+	var destination = inputs[action] * grid_size * direction
+	ray_cast_2d.target_position = destination
+	ray_cast_2d.force_raycast_update()
+	if not ray_cast_2d.is_colliding():
+		position += destination
+		return true
+	return false
