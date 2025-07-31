@@ -10,12 +10,24 @@ const inputs = {
 }
 
 # Stores the grid size, which is 32 (same as one tile)
-var grid_size = 32
+const grid_size : int = 32
+
+var clone : bool = false
+
+var step_history : Array[Vector2] = []
+
+@export var push_limit : int = -1
+@export var remaining_steps : int = 20
 
 # Reference to the RayCast2D node
 @onready var ray_cast_2d: RayCast2D = $PlayerRaycast
+@onready var ui_steps_node = get_tree().get_root().get_node('level/UI')
+@onready var level = get_tree().get_root().get_node('level')
 
-@export var push_limit = -1
+func _ready():
+	level.undo.connect(undo)
+	ui_steps_node.update_steps(remaining_steps)
+	step_history.append(position)
 
 # Updates the direction of the RayCast2D according to the input key
 # and moves one grid if no collision is detected
@@ -41,3 +53,24 @@ func move(action, reverse:bool):
 	else:
 		return false
 	return true
+	
+func _unhandled_input(event: InputEvent) -> void:
+	if remaining_steps == 0:
+		return
+		
+	for action in inputs.keys():
+		if event.is_action_pressed(action):
+			if move(action, false):
+				step_history.append(position)
+				remaining_steps -= 1
+				ui_steps_node.update_steps(remaining_steps)
+				level.force_step()
+				return
+
+func undo():
+	if not len(step_history) == 1:
+		var last_position = step_history[-2]
+		step_history.pop_back()
+		position = last_position
+		remaining_steps += 1
+		ui_steps_node.update_steps(remaining_steps)

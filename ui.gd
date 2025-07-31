@@ -1,9 +1,6 @@
 extends Control
 
-var stepLabel
+@onready var stepLabel = $Steps
 
-func _ready():
-	stepLabel = $Steps
-
-func update_steps(vaulue):
-	stepLabel.text = 'Steps left: ' + str(vaulue)
+func update_steps(value):
+	stepLabel.text = 'Steps left: ' + str(value)
