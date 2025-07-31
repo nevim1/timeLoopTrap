@@ -29,4 +29,10 @@ func move(action, reverse:bool):
 	if not ray_cast_2d.is_colliding():
 		position += destination
 		return true
+	elif ray_cast_2d.get_collision_mask_value(2) : 
+		print("BOX!")
+		#var movable = $Player/RayCast2D.get_collider()
+		#position += destination
+		#movable.position += destination
+	
 	return false
