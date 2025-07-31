@@ -11,7 +11,7 @@ const inputs = {
 # Stores the grid size, which is 32 (same as one tile)
 var grid_size = 32
 var current_loop: bool = true
-signal step
+
 # Reference to the RayCast2D node
 @onready var ray_cast_2d: RayCast2D = $RayCast2D
 

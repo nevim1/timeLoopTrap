@@ -12,13 +12,15 @@ func _ready():
 	ui_steps_node = get_node("UI")
 	
 	step.connect(ui_steps_node.update_steps)
+	
+	step.emit(remaining_steps)
 
 # A dictionary that maps input map actions to direction vectors
 const inputs = {
-	"moveRight": Vector2.RIGHT,
-	"moveLeft": Vector2.LEFT,
-	"moveDown": Vector2.DOWN,
-	"moveUp": Vector2.UP
+	"move_right": Vector2.RIGHT,
+	"move_left": Vector2.LEFT,
+	"move_down": Vector2.DOWN,
+	"move_up": Vector2.UP
 }
 
 # Calls the move function with the appropriate input key
@@ -37,7 +39,7 @@ func on_step_taken():
 func on_loop_ended():
 	remaining_loops -= 1 
 	if remaining_loops == 0 :
-		_on_loops_depleted()
+		on_loops_depleted()
 
-func _on_loops_depleted():
+func on_loops_depleted():
 	get_tree().reload_current_scene()
