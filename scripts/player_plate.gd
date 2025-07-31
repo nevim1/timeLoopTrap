@@ -1,5 +1,7 @@
 extends ShapeCast2D
-signal player_detected
+signal detection
+
+
 func _process(_delta):
 	if is_colliding():
-		player_detected.emit(true)
+		detection.emit(true)

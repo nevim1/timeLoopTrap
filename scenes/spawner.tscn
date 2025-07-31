@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlthspcp6ibil"]
+
+[ext_resource type="Script" uid="uid://cts2coohsqygw" path="res://scripts/box.gd" id="1_ttk4a"]
+[ext_resource type="Texture2D" uid="uid://co6otxooslo1r" path="res://assets/tileMap.png" id="1_yp5lu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ttk4a"]
+size = Vector2(32, 32)
+
+[node name="spawner" type="Area2D"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_ttk4a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ttk4a")
+
+[node name="BoxRaycast" type="RayCast2D" parent="."]
+target_position = Vector2(0, 32)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-16, -16)
+texture = ExtResource("1_yp5lu")
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 0, 32, 32)
