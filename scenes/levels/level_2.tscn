@@ -57,5 +57,3 @@ theme = ExtResource("4_fiq81")
 text = "I also removed your spare steps, so be efficient  :)"
 horizontal_alignment = 1
 autowrap_mode = 2
-
-[connection signal="body_entered" from="TileMapLayer/Area2D" to="TileMapLayer/Area2D" method="win"]

@@ -43,7 +43,7 @@ layout_mode = 2
 
 [node name="VBoxContainer" parent="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer" instance=ExtResource("2_grwcp")]
 layout_mode = 2
-path = "res://scenes/levels/level_1.tscn"
+path = "scenes/levels/level_1.tscn"
 
 [node name="Sprite2D" parent="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer/VBoxContainer" index="1"]
 texture = ExtResource("3_5r7aj")
@@ -57,7 +57,7 @@ layout_mode = 2
 
 [node name="VBoxContainer2" parent="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer2" instance=ExtResource("2_grwcp")]
 layout_mode = 2
-path = "res://scenes/levels/level_2.tscn"
+path = "scenes/levels/level_2.tscn"
 
 [node name="Sprite2D" parent="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer2/VBoxContainer2" index="1"]
 texture = ExtResource("4_tkrcc")
@@ -71,7 +71,7 @@ layout_mode = 2
 
 [node name="VBoxContainer" parent="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer3" instance=ExtResource("2_grwcp")]
 layout_mode = 2
-path = "res://scenes/levels/level_3.tscn"
+path = "scenes/levels/level_3.tscn"
 
 [node name="Sprite2D" parent="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer3/VBoxContainer" index="1"]
 texture = ExtResource("5_tkrcc")

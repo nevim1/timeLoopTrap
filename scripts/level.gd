@@ -20,6 +20,7 @@ signal step
 signal undo
 signal reset
 signal end_loop
+signal button_pressed
 
 func _ready():
 	ui_steps_node = get_node("UI")
@@ -54,3 +55,6 @@ func on_loop_ended():
 
 func on_loops_depleted():
 	get_tree().reload_current_scene()
+
+func button_detection(pressed : bool):
+	button_pressed.emit()

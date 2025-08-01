@@ -1,27 +1,27 @@
-[gd_scene load_steps=7 format=3 uid="uid://bg856vrhcbhid"]
+[gd_scene load_steps=7 format=3 uid="uid://bfijhahx5eur1"]
 
 [ext_resource type="Script" uid="uid://bvjkounteftvr" path="res://scripts/switch.gd" id="1_41vnd"]
 [ext_resource type="Texture2D" uid="uid://co6otxooslo1r" path="res://assets/tileMap.png" id="2_qc2to"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xb3yb"]
-size = Vector2(32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_80pw7"]
-atlas = ExtResource("2_qc2to")
-region = Rect2(192, 32, 32, 32)
+size = Vector2(30, 30)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_utded"]
 atlas = ExtResource("2_qc2to")
 region = Rect2(192, 64, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_80pw7"]
+atlas = ExtResource("2_qc2to")
+region = Rect2(192, 32, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_5m7a1"]
 animations = [{
 "frames": [{
-"duration": 1.2,
-"texture": SubResource("AtlasTexture_80pw7")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_utded")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80pw7")
 }],
 "loop": false,
 "name": &"default",

@@ -8,7 +8,6 @@
 [node name="level" type="Node2D"]
 script = ExtResource("1_fbemd")
 step_limit = 12
-can_loop = true
 
 [node name="UI" parent="." instance=ExtResource("2_pn6ll")]
 z_index = 2
@@ -79,5 +78,3 @@ offset_right = 1342.0
 offset_bottom = 276.875
 theme = ExtResource("4_x42e6")
 text = "You can undo with Z and reset the whole level with R"
-
-[connection signal="body_entered" from="TileMapLayer/Area2D" to="TileMapLayer/Area2D" method="win"]
