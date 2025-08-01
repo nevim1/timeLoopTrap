@@ -3,7 +3,7 @@ extends Area2D
 @onready var ray_cast_2d : RayCast2D = $BoxRaycast
 @onready var level : Node2D = get_tree().get_root().get_node('level')
 
-var player_scene : PackedScene = preload('res://scenes/Player.tscn')
+var player_scene : PackedScene = preload('res://scenes/tiles/Player.tscn')
 
 var step_history : Array[Vector2] = []
 

@@ -18,9 +18,10 @@ var step_history : Array[Vector2] = []
 var step_delta_history : Array[Vector2] = []
 var replay_step : int = 0
 
-@export var push_limit : int = -1
-@export var remaining_steps : int = 20
+var push_limit : int = -1
+var remaining_steps : int
 
+var can_create_clones : bool = false
 
 # Reference to the RayCast2D node
 @onready var ray_cast_2d: RayCast2D = $PlayerRaycast
@@ -29,11 +30,18 @@ var replay_step : int = 0
 @onready var level : Node2D = get_tree().get_root().get_node('level')
 
 func _ready():
+	remaining_steps = level.step_limit
+	push_limit = level.push_limit
+	can_create_clones = level.can_loop
+	
 	level.undo.connect(undo)
 	level.end_loop.connect(end_loop)
 	level.step.connect(step)
+	
 	ui_steps_node.update_steps(remaining_steps)
+	
 	step_history.append(position)
+	
 
 # Updates the direction of the RayCast2D according to the input key
 # and moves one grid if no collision is detected

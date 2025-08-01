@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=4 uid="uid://bhxcgrjpp082k"]
+
+[ext_resource type="Script" uid="uid://cra8iujnxxcn8" path="res://scripts/level.gd" id="1_fbemd"]
+[ext_resource type="PackedScene" uid="uid://bb0u070prx84x" path="res://scenes/ui/ui.tscn" id="2_pn6ll"]
+[ext_resource type="TileSet" uid="uid://neku2qaay4mt" path="res://tilesets/TileSet.tres" id="3_oii7c"]
+[ext_resource type="Theme" uid="uid://2scudmu5elmn" path="res://themes/onGroubndTextTheme.tres" id="4_x42e6"]
+
+[node name="level" type="Node2D"]
+script = ExtResource("1_fbemd")
+step_limit = 12
+can_loop = true
+
+[node name="UI" parent="." instance=ExtResource("2_pn6ll")]
+z_index = 2
+anchors_preset = 9
+anchor_right = 0.0
+offset_left = 16.0
+offset_top = 24.0
+offset_right = 1900.0
+offset_bottom = 1080.0
+grow_horizontal = 1
+metadata/_edit_lock_ = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(0, -40)
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAANAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAOAAEAAAAAAAAAAAAOAAIAAAAAAAAAAAAOAAMAAAAAAAAAAAAOAAQAAAAAAAAAAAAOAAYAAAAAAAAAAAAOAAcAAAAAAAAAAAAOAAgAAAAAAAAAAAANAAgAAAAAAAAAAAAMAAgAAAAAAAAAAAALAAgAAAAAAAAAAAAKAAgAAAAAAAAAAAAJAAgAAAAAAAAAAAAIAAgAAAAAAAAAAAAHAAgAAAAAAAAAAAAGAAgAAAAAAAAAAAAFAAgAAAAAAAAAAAAEAAgAAAAAAAAAAAADAAgAAAAAAAAAAAACAAgAAAAAAAAAAAABAAgAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAEAAAAAAAAAAAAOAAUAAAAAAAAAAAADAAQAAQAAAAAABgALAAQAAQAAAAAABAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAAAAAABAAQAAAAAAAAAAAABAAUAAAAAAAAAAAABAAYAAAAAAAAAAAABAAcAAAAAAAAAAAACAAcAAAAAAAAAAAADAAcAAAAAAAAAAAAEAAcAAAAAAAAAAAAFAAcAAAAAAAAAAAAGAAcAAAAAAAAAAAAHAAcAAAAAAAAAAAAIAAcAAAAAAAAAAAAJAAcAAAAAAAAAAAAKAAcAAAAAAAAAAAALAAcAAAAAAAAAAAAMAAcAAAAAAAAAAAANAAcAAAAAAAAAAAANAAYAAAAAAAAAAAANAAUAAAAAAAAAAAANAAQAAAAAAAAAAAANAAMAAAAAAAAAAAANAAIAAAAAAAAAAAANAAEAAAAAAAAAAAAMAAEAAAAAAAAAAAALAAEAAAAAAAAAAAAKAAEAAAAAAAAAAAAJAAEAAAAAAAAAAAAIAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAADAAEAAAAAAAAAAAACAAEAAAAAAAAAAAA=")
+tile_set = ExtResource("3_oii7c")
+metadata/_edit_lock_ = true
+
+[node name="tutorial_popups" type="Control" parent="."]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="YouLabel" type="Label" parent="tutorial_popups"]
+layout_mode = 0
+offset_left = 522.0
+offset_top = 576.0
+offset_right = 810.0
+offset_bottom = 796.0
+theme = ExtResource("4_x42e6")
+text = "<-- this is you
+
+You can move with WASD or arrows
+"
+autowrap_mode = 2
+
+[node name="FinishLabel" type="Label" parent="tutorial_popups"]
+layout_mode = 0
+offset_left = 1052.0
+offset_top = 576.0
+offset_right = 1420.0
+offset_bottom = 797.0
+theme = ExtResource("4_x42e6")
+text = "You need to get here -->
+ ...for some reason"
+autowrap_mode = 2
+
+[node name="StepLimitLabel" type="Label" parent="tutorial_popups"]
+z_index = 1
+layout_mode = 0
+offset_left = 40.0
+offset_top = 99.0
+offset_right = 785.0
+offset_bottom = 140.875
+theme = ExtResource("4_x42e6")
+text = "Also you have limited amount of steps you can take"
+
+[node name="UndoLabel" type="Label" parent="tutorial_popups"]
+layout_mode = 0
+offset_left = 578.0
+offset_top = 235.0
+offset_right = 1342.0
+offset_bottom = 276.875
+theme = ExtResource("4_x42e6")
+text = "You can undo with Z and reset the whole level with R"

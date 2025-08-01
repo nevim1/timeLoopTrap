@@ -1,6 +1,14 @@
 extends Node2D
 
-@export var remaining_loops: int
+@export_group("Player settings")
+## Set how many clones can player make
+@export var loop_limit : int = 3
+## Set how many steps can player make
+@export var step_limit : int = 10
+## Set how many boxes can player push at once, -1 means that player can push unlimited boxes
+@export var push_limit : int = -1
+## Set if player can loop
+@export var can_loop : bool = false
 
 var ui_steps_node
 
@@ -30,7 +38,7 @@ func _unhandled_input(event):
 			step_counter -= 1
 			undo.emit()
 		
-	elif event.is_action_pressed("end_loop"):
+	elif event.is_action_pressed("end_loop") and can_loop:
 		step_counter = 0
 		end_loop.emit()
 
@@ -40,8 +48,8 @@ func force_step():
 
 
 func on_loop_ended():
-	remaining_loops -= 1
-	if remaining_loops == 0 :
+	loop_limit -= 1
+	if loop_limit == 0 :
 		on_loops_depleted()
 
 func on_loops_depleted():

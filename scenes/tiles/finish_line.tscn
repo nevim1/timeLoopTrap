@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://i5osvdp71ysm"]
 
-[ext_resource type="Texture2D" uid="uid://co6otxooslo1r" path="res://assets/tileMap.png" id="1_tqgrr"]
-[ext_resource type="Script" uid="uid://cadkpeqmrctin" path="res://scripts/finish_line.gd" id="1_v8ikc"]
+[ext_resource type="Script" uid="uid://cadkpeqmrctin" path="res://scripts/finish_line.gd" id="1_66tlo"]
+[ext_resource type="Texture2D" uid="uid://co6otxooslo1r" path="res://assets/tileMap.png" id="2_pxkor"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_05ejo"]
 size = Vector2(30, 30)
@@ -9,11 +9,11 @@ size = Vector2(30, 30)
 [node name="Area2D" type="Area2D"]
 collision_layer = 4
 collision_mask = 4
-script = ExtResource("1_v8ikc")
+script = ExtResource("1_66tlo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-16, -16)
-texture = ExtResource("1_tqgrr")
+texture = ExtResource("2_pxkor")
 centered = false
 region_enabled = true
 region_rect = Rect2(64, 0, 32, 32)
