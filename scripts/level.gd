@@ -57,4 +57,5 @@ func on_loops_depleted():
 	get_tree().reload_current_scene()
 
 func button_detection(pressed : bool):
+	print('level got that button was pressed, sending signal')
 	button_pressed.emit()

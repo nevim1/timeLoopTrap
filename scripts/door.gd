@@ -5,16 +5,18 @@ extends Area2D
 
 func _ready() -> void:
 	level.button_pressed.connect(button_pressed)
+	set_collision_layer_value(4, true)
 
 func open_door():
 	set_collision_layer_value(4, false)
-	for i in range(3):
+	for i in range(4):
 		animation_player.set_frame(i)
 	
 func close_door():
 	set_collision_layer_value(4, true)
-	for i in [3, 2, 1, 0]:
+	for i in range(3, -1, -1):
 		animation_player.set_frame(i)
 
 func button_pressed():
+	print('doors got signal that button was pressed')
 	open_door()
