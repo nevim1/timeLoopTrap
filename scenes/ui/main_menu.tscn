@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://diapffo61qq3v"]
+[gd_scene load_steps=3 format=3 uid="uid://diapffo61qq3v"]
 
 [ext_resource type="Script" uid="uid://ddnxgij3ykx8r" path="res://scripts/main_menu.gd" id="1_sl1te"]
+[ext_resource type="Theme" uid="uid://2scudmu5elmn" path="res://themes/onGroubndTextTheme.tres" id="2_fe2o3"]
 
 [node name="main menu" type="Control"]
 layout_mode = 3
@@ -31,6 +32,7 @@ alignment = 1
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
+theme = ExtResource("2_fe2o3")
 text = "GAME TITLE"
 horizontal_alignment = 1
 

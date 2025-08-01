@@ -1,15 +1,12 @@
 [gd_scene load_steps=4 format=3 uid="uid://bphwnm0fjwu0v"]
 
-
 [ext_resource type="Script" uid="uid://h54m042frvpo" path="res://scripts/player_plate.gd" id="1_msxn1"]
 [ext_resource type="Texture2D" uid="uid://co6otxooslo1r" path="res://assets/tileMap.png" id="1_pw2vp"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_msxn1"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cxf1g"]
+size = Vector2(32, 32)
 
-[node name="ShapeCast2D" type="ShapeCast2D"]
-shape = SubResource("RectangleShape2D_msxn1")
-target_position = Vector2(0, 0)
-collision_mask = 4
+[node name="Area2D" type="Area2D"]
 script = ExtResource("1_msxn1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -18,3 +15,9 @@ texture = ExtResource("1_pw2vp")
 centered = false
 region_enabled = true
 region_rect = Rect2(192, 0, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_cxf1g")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

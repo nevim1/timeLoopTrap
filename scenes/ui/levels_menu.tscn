@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://bc6mlfem5nhyv"]
+[gd_scene load_steps=6 format=3 uid="uid://bc6mlfem5nhyv"]
 
 [ext_resource type="Script" uid="uid://b2pljpijfwm6w" path="res://scripts/levels_menu.gd" id="1_r3otx"]
 [ext_resource type="PackedScene" uid="uid://ber1ittvitqas" path="res://scenes/ui/level_box_ui.tscn" id="2_grwcp"]
+[ext_resource type="Texture2D" uid="uid://cx5rc82rxtpf3" path="res://assets/level_1_icon.jpg" id="3_5r7aj"]
+[ext_resource type="Texture2D" uid="uid://6f6q50df2bf0" path="res://assets/level_2_icon.jpg" id="4_tkrcc"]
+[ext_resource type="Texture2D" uid="uid://cxljtmrl34t2c" path="res://assets/level_3_icon.jpg" id="5_tkrcc"]
 
 [node name="levels menu" type="Control"]
 layout_mode = 3
@@ -40,6 +43,42 @@ layout_mode = 2
 
 [node name="VBoxContainer" parent="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer" instance=ExtResource("2_grwcp")]
 layout_mode = 2
+path = "res://scenes/levels/level_1.tscn"
+
+[node name="Sprite2D" parent="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer/VBoxContainer" index="1"]
+texture = ExtResource("3_5r7aj")
+region_rect = Rect2(1351.42, 486.947, 235, 183)
+
+[node name="Label" parent="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer/VBoxContainer/Sprite2D" index="0"]
+text = "LEVEL: 1"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HSplitContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer2" parent="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer2" instance=ExtResource("2_grwcp")]
+layout_mode = 2
+path = "res://scenes/levels/level_2.tscn"
+
+[node name="Sprite2D" parent="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer2/VBoxContainer2" index="1"]
+texture = ExtResource("4_tkrcc")
+region_rect = Rect2(746.961, 301.59, 235, 183)
+
+[node name="Label" parent="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer2/VBoxContainer2/Sprite2D" index="0"]
+text = "LEVEL: 2"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/HSplitContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" parent="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer3" instance=ExtResource("2_grwcp")]
+layout_mode = 2
+path = "res://scenes/levels/level_3.tscn"
+
+[node name="Sprite2D" parent="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer3/VBoxContainer" index="1"]
+texture = ExtResource("5_tkrcc")
+region_rect = Rect2(847.693, 482.578, 235, 183)
+
+[node name="Label" parent="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer3/VBoxContainer/Sprite2D" index="0"]
+text = "LEVEL: 3"
 
 [node name="Back button" type="Button" parent="MarginContainer"]
 custom_minimum_size = Vector2(200, 75)
@@ -49,3 +88,7 @@ size_flags_vertical = 0
 text = "back"
 
 [connection signal="pressed" from="MarginContainer/Back button" to="." method="_on_back_button_pressed"]
+
+[editable path="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+[editable path="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer2/VBoxContainer2"]
+[editable path="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer3/VBoxContainer"]
