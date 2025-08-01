@@ -1,44 +1,25 @@
-[gd_scene load_steps=7 format=3 uid="uid://bfijhahx5eur1"]
+[gd_scene load_steps=4 format=3 uid="uid://bg856vrhcbhid"]
 
-[ext_resource type="Script" uid="uid://bvjkounteftvr" path="res://scripts/switch.gd" id="1_41vnd"]
+[ext_resource type="Script" uid="uid://bvjkounteftvr" path="res://scripts/button.gd" id="1_41vnd"]
 [ext_resource type="Texture2D" uid="uid://co6otxooslo1r" path="res://assets/tileMap.png" id="2_qc2to"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xb3yb"]
-size = Vector2(30, 30)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_utded"]
-atlas = ExtResource("2_qc2to")
-region = Rect2(192, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_80pw7"]
-atlas = ExtResource("2_qc2to")
-region = Rect2(192, 32, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_5m7a1"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_utded")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_80pw7")
-}],
-"loop": false,
-"name": &"default",
-"speed": 5.0
-}]
+size = Vector2(31, 31)
 
 [node name="Area2D" type="Area2D"]
+collision_layer = 4
+collision_mask = 4
 script = ExtResource("1_41vnd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_xb3yb")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1.2517e-06, 0.249999)
-scale = Vector2(1.375, 1.35937)
-sprite_frames = SubResource("SpriteFrames_5m7a1")
-frame = 1
-frame_progress = 1.0
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-16, -16)
+texture = ExtResource("2_qc2to")
+centered = false
+vframes = 2
+region_enabled = true
+region_rect = Rect2(192, 32, 32, 65)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

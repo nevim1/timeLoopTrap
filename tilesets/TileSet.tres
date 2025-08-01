@@ -1,13 +1,13 @@
 [gd_resource type="TileSet" load_steps=11 format=3 uid="uid://neku2qaay4mt"]
 
 [ext_resource type="Texture2D" uid="uid://co6otxooslo1r" path="res://assets/tileMap.png" id="1_m0wxs"]
-[ext_resource type="PackedScene" uid="uid://bphwnm0fjwu0v" path="res://scenes/tiles/player_plate.tscn" id="2_vjxkk"]
-[ext_resource type="PackedScene" uid="uid://4lds8fep607y" path="res://scenes/tiles/box.tscn" id="3_yn4kh"]
-[ext_resource type="PackedScene" uid="uid://n16kvlssq2ql" path="res://scenes/tiles/door.tscn" id="4_mo40j"]
-[ext_resource type="PackedScene" uid="uid://i5osvdp71ysm" path="res://scenes/tiles/finish_line.tscn" id="5_74ru1"]
-[ext_resource type="PackedScene" uid="uid://dlthspcp6ibil" path="res://scenes/tiles/spawner.tscn" id="6_guk8c"]
-[ext_resource type="PackedScene" uid="uid://3pk5xiwwd52k" path="res://scenes/tiles/Player.tscn" id="7_04apm"]
-[ext_resource type="PackedScene" path="res://scenes/tiles/button.tscn" id="8_yn4kh"]
+[ext_resource type="PackedScene" uid="uid://4lds8fep607y" path="res://scenes/tiles/box.tscn" id="2_hhvbn"]
+[ext_resource type="PackedScene" uid="uid://bphwnm0fjwu0v" path="res://scenes/tiles/player_plate.tscn" id="2_t7fou"]
+[ext_resource type="PackedScene" uid="uid://n16kvlssq2ql" path="res://scenes/tiles/door.tscn" id="4_2edxk"]
+[ext_resource type="PackedScene" uid="uid://i5osvdp71ysm" path="res://scenes/tiles/finish_line.tscn" id="5_k8lel"]
+[ext_resource type="PackedScene" uid="uid://dlthspcp6ibil" path="res://scenes/tiles/spawner.tscn" id="6_s4r4k"]
+[ext_resource type="PackedScene" uid="uid://3pk5xiwwd52k" path="res://scenes/tiles/Player.tscn" id="7_vjxkk"]
+[ext_resource type="PackedScene" uid="uid://bg856vrhcbhid" path="res://scenes/tiles/button.tscn" id="8_yn4kh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_abirl"]
 texture = ExtResource("1_m0wxs")
@@ -81,12 +81,12 @@ texture_region_size = Vector2i(32, 32)
 7:7/0 = 0
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_g2hbc"]
-scenes/1/scene = ExtResource("2_vjxkk")
-scenes/2/scene = ExtResource("3_yn4kh")
-scenes/3/scene = ExtResource("4_mo40j")
-scenes/4/scene = ExtResource("5_74ru1")
-scenes/5/scene = ExtResource("6_guk8c")
-scenes/6/scene = ExtResource("7_04apm")
+scenes/1/scene = ExtResource("2_t7fou")
+scenes/2/scene = ExtResource("2_hhvbn")
+scenes/3/scene = ExtResource("4_2edxk")
+scenes/4/scene = ExtResource("5_k8lel")
+scenes/5/scene = ExtResource("6_s4r4k")
+scenes/6/scene = ExtResource("7_vjxkk")
 scenes/7/scene = ExtResource("8_yn4kh")
 
 [resource]

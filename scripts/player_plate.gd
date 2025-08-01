@@ -1,4 +1,4 @@
-extends ShapeCast2D
+extends Area2D
 signal player_detection
 
 func _on_body_entered(_body):
