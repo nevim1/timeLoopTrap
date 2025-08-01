@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v8ikc"]
 
 [node name="ShapeCast2D" type="ShapeCast2D"]
-scale = Vector2(1.6, 1.6)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_v8ikc")
 target_position = Vector2(0, 0)
 script = ExtResource("1_v8ikc")

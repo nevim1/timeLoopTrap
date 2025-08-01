@@ -19,3 +19,6 @@ mono_crash.*.json
 
 # Ignore mergetool backups
 *.orig
+
+# Ignore temporary files
+*.tmp

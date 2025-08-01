@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc6mlfem5nhyv"]
+
+[ext_resource type="Script" uid="uid://b2pljpijfwm6w" path="res://scripts/levels_menu.gd" id="1_r3otx"]
+[ext_resource type="PackedScene" uid="uid://ber1ittvitqas" path="res://scenes/level_box_ui.tscn" id="2_grwcp"]
+
+[node name="levels menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r3otx")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="MarginContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "levels:"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HSplitContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HSplitContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" parent="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer" instance=ExtResource("2_grwcp")]
+layout_mode = 2
+
+[node name="Back button" type="Button" parent="MarginContainer"]
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "back"
+
+[connection signal="pressed" from="MarginContainer/Back button" to="." method="_on_back_button_pressed"]
