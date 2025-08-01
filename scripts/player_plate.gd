@@ -1,9 +1,9 @@
-extends ShapeCast2D
+extends Area2D
 signal player_detection
 
-func _on_body_entered(body):
+func _on_body_entered(_body):
 	player_detection.emit(true)
 
 
-func _on_body_exited(body):
+func _on_body_exited(_body):
 	player_detection.emit(false)

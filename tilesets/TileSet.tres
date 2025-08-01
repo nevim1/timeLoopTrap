@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=10 format=3 uid="uid://neku2qaay4mt"]
+[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://neku2qaay4mt"]
 
 [ext_resource type="Texture2D" uid="uid://co6otxooslo1r" path="res://assets/tileMap.png" id="1_m0wxs"]
 [ext_resource type="PackedScene" uid="uid://4lds8fep607y" path="res://scenes/tiles/box.tscn" id="2_hhvbn"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://i5osvdp71ysm" path="res://scenes/tiles/finish_line.tscn" id="5_k8lel"]
 [ext_resource type="PackedScene" uid="uid://dlthspcp6ibil" path="res://scenes/tiles/spawner.tscn" id="6_s4r4k"]
 [ext_resource type="PackedScene" uid="uid://3pk5xiwwd52k" path="res://scenes/tiles/Player.tscn" id="7_vjxkk"]
+[ext_resource type="PackedScene" uid="uid://bg856vrhcbhid" path="res://scenes/tiles/button.tscn" id="8_yn4kh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_abirl"]
 texture = ExtResource("1_m0wxs")
@@ -86,6 +87,7 @@ scenes/3/scene = ExtResource("4_2edxk")
 scenes/4/scene = ExtResource("5_k8lel")
 scenes/5/scene = ExtResource("6_s4r4k")
 scenes/6/scene = ExtResource("7_vjxkk")
+scenes/7/scene = ExtResource("8_yn4kh")
 
 [resource]
 tile_size = Vector2i(32, 32)

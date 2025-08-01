@@ -1,46 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://n16kvlssq2ql"]
+[gd_scene load_steps=4 format=3 uid="uid://n16kvlssq2ql"]
 
-[ext_resource type="Script" path="res://scripts/door.gd" id="1_vykve"]
+[ext_resource type="Script" uid="uid://t32qm0iajtvo" path="res://scripts/door.gd" id="1_vykve"]
 [ext_resource type="Texture2D" uid="uid://co6otxooslo1r" path="res://assets/tileMap.png" id="2_sxudl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v6xrn"]
 size = Vector2(32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ba8gm"]
-atlas = ExtResource("2_sxudl")
-region = Rect2(224, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v6xrn"]
-atlas = ExtResource("2_sxudl")
-region = Rect2(224, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0phs7"]
-atlas = ExtResource("2_sxudl")
-region = Rect2(224, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_50cdl"]
-atlas = ExtResource("2_sxudl")
-region = Rect2(224, 32, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_y5njw"]
-animations = [{
-"frames": [{
-"duration": 1.7,
-"texture": SubResource("AtlasTexture_ba8gm")
-}, {
-"duration": 0.4,
-"texture": SubResource("AtlasTexture_v6xrn")
-}, {
-"duration": 0.4,
-"texture": SubResource("AtlasTexture_0phs7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_50cdl")
-}],
-"loop": false,
-"name": &"default",
-"speed": 5.0
-}]
 
 [node name="Area2D" type="Area2D"]
 script = ExtResource("1_vykve")
@@ -48,7 +12,10 @@ script = ExtResource("1_vykve")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_v6xrn")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_y5njw")
-frame = 3
-frame_progress = 1.0
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-16, -16)
+texture = ExtResource("2_sxudl")
+centered = false
+vframes = 4
+region_enabled = true
+region_rect = Rect2(224, 0, 32, 128)
