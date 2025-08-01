@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://beiaiddrqd0ib"]
+[gd_scene load_steps=5 format=4 uid="uid://beiaiddrqd0ib"]
 
 [ext_resource type="TileSet" uid="uid://neku2qaay4mt" path="res://tilesets/TileSet.tres" id="1_dm1bw"]
 [ext_resource type="Script" uid="uid://cra8iujnxxcn8" path="res://scripts/level.gd" id="1_g1wnu"]
 [ext_resource type="PackedScene" uid="uid://3pk5xiwwd52k" path="res://scenes/Player.tscn" id="1_vuk21"]
 [ext_resource type="PackedScene" uid="uid://bb0u070prx84x" path="res://scenes/ui.tscn" id="3_dxh5b"]
-[ext_resource type="Script" uid="uid://h04nv6yy1pjf" path="res://scripts/ui.gd" id="5_pb1bd"]
 
 [node name="level" type="Node2D"]
 script = ExtResource("1_g1wnu")
@@ -12,7 +11,13 @@ remaining_loops = 5
 
 [node name="UI" parent="." instance=ExtResource("3_dxh5b")]
 z_index = 2
-script = ExtResource("5_pb1bd")
+anchors_preset = 9
+anchor_right = 0.0
+offset_left = 16.0
+offset_top = 24.0
+offset_right = 1900.0
+offset_bottom = 1080.0
+grow_horizontal = 1
 
 [node name="Player" parent="." instance=ExtResource("1_vuk21")]
 visibility_layer = 2
