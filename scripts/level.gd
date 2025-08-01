@@ -2,7 +2,6 @@ extends Node2D
 
 @export var remaining_loops: int
 
-var player_node
 var ui_steps_node
 
 var last_steps = []
@@ -15,7 +14,6 @@ signal reset
 signal end_loop
 
 func _ready():
-	player_node = get_node("Player")
 	ui_steps_node = get_node("UI")
 
 func _unhandled_input(event):

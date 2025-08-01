@@ -14,7 +14,6 @@ script = ExtResource("1_ks2v0")
 [node name="BoxCollider" type="CollisionShape2D" parent="."]
 z_index = 2
 shape = SubResource("RectangleShape2D_oq5cr")
-metadata/_edit_group_ = true
 
 [node name="BoxSprite" type="Sprite2D" parent="."]
 position = Vector2(-16, -16)
@@ -22,7 +21,6 @@ texture = ExtResource("2_c2ln5")
 centered = false
 region_enabled = true
 region_rect = Rect2(128, 0, 32, 32)
-metadata/_edit_group_ = true
 
 [node name="BoxRaycast" type="RayCast2D" parent="."]
 target_position = Vector2(0, 32)

@@ -1,5 +1,6 @@
-extends ShapeCast2D
+extends Area2D
 
-func _process(delta):
-	if is_colliding():
-		print("win")
+@onready var level : Node2D = get_tree().get_root().get_node('level')
+
+func win(_trash):
+	print("win")
