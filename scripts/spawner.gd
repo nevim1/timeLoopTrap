@@ -3,6 +3,8 @@ extends Area2D
 @onready var ray_cast_2d : RayCast2D = $BoxRaycast
 @onready var level : Node2D = get_tree().get_root().get_node('level')
 
+var player_scene : PackedScene = preload('res://scenes/Player.tscn')
+
 var step_history : Array[Vector2] = []
 
 func _ready():
@@ -12,7 +14,6 @@ func _ready():
 	init_history()
 	
 func init_history():
-	step_history = []
 	step_history.append(position)
 
 func move(destination, limit):
@@ -48,5 +49,8 @@ func undo():
 		position = last_position
 
 func end_loop():
+	var new_player = player_scene.instantiate()
+	new_player.position = position + Vector2(32,0)
+	level.add_child(new_player)
 	position = step_history[0]
 	init_history()

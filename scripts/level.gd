@@ -7,10 +7,12 @@ var ui_steps_node
 
 var last_steps = []
 var last_step = null
+var step_counter = 0
 
 signal step
 signal undo
 signal reset
+signal end_loop
 
 func _ready():
 	player_node = get_node("Player")
@@ -26,10 +28,16 @@ func _unhandled_input(event):
 		get_tree().reload_current_scene()
 		
 	elif event.is_action_pressed("undo"):
-		undo.emit()
-	#elif remaining_steps == 0:
+		if step_counter != 0:
+			step_counter -= 1
+			undo.emit()
+		
+	elif event.is_action_pressed("end_loop"):
+		step_counter = 0
+		end_loop.emit()
 
 func force_step():
+	step_counter += 1
 	step.emit()
 
 

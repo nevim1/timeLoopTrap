@@ -15,28 +15,29 @@ const grid_size : int = 32
 var clone : bool = false
 
 var step_history : Array[Vector2] = []
+var step_delta_history : Array[Vector2] = []
+var replay_step : int = 0
 
 @export var push_limit : int = -1
 @export var remaining_steps : int = 20
 
+
 # Reference to the RayCast2D node
 @onready var ray_cast_2d: RayCast2D = $PlayerRaycast
+@onready var player_sprite : Sprite2D = $PlayerSprite
 @onready var ui_steps_node = get_tree().get_root().get_node('level/UI')
-@onready var level = get_tree().get_root().get_node('level')
+@onready var level : Node2D = get_tree().get_root().get_node('level')
 
 func _ready():
 	level.undo.connect(undo)
+	level.end_loop.connect(end_loop)
+	level.step.connect(step)
 	ui_steps_node.update_steps(remaining_steps)
 	step_history.append(position)
 
 # Updates the direction of the RayCast2D according to the input key
 # and moves one grid if no collision is detected
-func move(action, reverse:bool):
-	var direction = 1
-	if reverse:
-		direction *= -1
-		
-	var destination = inputs[action] * grid_size * direction
+func move(destination : Vector2):
 	ray_cast_2d.target_position = destination
 	ray_cast_2d.force_raycast_update()
 	if not ray_cast_2d.is_colliding():
@@ -55,22 +56,48 @@ func move(action, reverse:bool):
 	return true
 	
 func _unhandled_input(event: InputEvent) -> void:
+	if clone: 
+		return
+		
 	if remaining_steps == 0:
 		return
 		
 	for action in inputs.keys():
 		if event.is_action_pressed(action):
-			if move(action, false):
+			var destination = inputs[action] * grid_size
+			if move(destination):
 				step_history.append(position)
+				step_delta_history.append(destination)
 				remaining_steps -= 1
 				ui_steps_node.update_steps(remaining_steps)
 				level.force_step()
 				return
 
 func undo():
-	if not len(step_history) == 1:
-		var last_position = step_history[-2]
-		step_history.pop_back()
-		position = last_position
-		remaining_steps += 1
-		ui_steps_node.update_steps(remaining_steps)
+	if clone:
+		replay_step -= 1
+		position = step_history[replay_step%len(step_history)]
+	else:
+		if not len(step_history) == 1:
+			var last_position = step_history[-2]
+			step_history.pop_back()
+			step_delta_history.pop_back()
+			position = last_position
+			remaining_steps += 1
+			ui_steps_node.update_steps(remaining_steps)
+		
+func end_loop():
+	print(step_history)
+	if not clone:
+		clone = true
+		player_sprite.modulate = Color(1,1,1,0.5)
+		position = step_history[0]
+		replay_step = 0
+		
+func step():
+	if clone:
+		if (replay_step) % (len(step_history)) == (len(step_history) - 1):
+			position = step_history[0]
+		else:
+			move(step_history[((replay_step+1)%len(step_history))] - step_history[((replay_step)%len(step_history))])
+		replay_step += 1
