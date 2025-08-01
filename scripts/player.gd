@@ -87,7 +87,6 @@ func undo():
 			ui_steps_node.update_steps(remaining_steps)
 		
 func end_loop():
-	print(step_history)
 	if not clone:
 		clone = true
 		player_sprite.modulate = Color(1,1,1,0.5)

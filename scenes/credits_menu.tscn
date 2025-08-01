@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cxdilmgyvgrar"]
+[gd_scene load_steps=2 format=3 uid="uid://csq0rejgrjioq"]
 
-[ext_resource type="Script" uid="uid://bgwpsvafmgx30" path="res://scripts/credits_menu.gd" id="1_27l6r"]
+[ext_resource type="Script" path="res://scripts/credits_menu.gd" id="1_27l6r"]
 
 [node name="main menu" type="Control"]
 layout_mode = 3
@@ -70,6 +70,10 @@ layout_mode = 2
 action_mode = 0
 text = "itch profile"
 uri = "https://veejayiam.itch.io/"
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
 
 [node name="github profiles" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
