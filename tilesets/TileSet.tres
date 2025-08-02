@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=12 format=3 uid="uid://neku2qaay4mt"]
+[gd_resource type="TileSet" load_steps=13 format=3 uid="uid://neku2qaay4mt"]
 
 [ext_resource type="Texture2D" uid="uid://co6otxooslo1r" path="res://assets/tileMap.png" id="1_m0wxs"]
 [ext_resource type="PackedScene" uid="uid://4lds8fep607y" path="res://scenes/tiles/box.tscn" id="2_hhvbn"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://3pk5xiwwd52k" path="res://scenes/tiles/Player.tscn" id="7_vjxkk"]
 [ext_resource type="PackedScene" uid="uid://bg856vrhcbhid" path="res://scenes/tiles/button.tscn" id="8_yn4kh"]
 [ext_resource type="PackedScene" uid="uid://ba7mlcoqdsy3p" path="res://scenes/tiles/box_plate.tscn" id="9_mo40j"]
+[ext_resource type="PackedScene" uid="uid://b20tw7x7xe062" path="res://scenes/tiles/wire.tscn" id="10_74ru1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_abirl"]
 texture = ExtResource("1_m0wxs")
@@ -54,32 +55,45 @@ texture_region_size = Vector2i(32, 32)
 3:4/0 = 0
 4:4/0 = 0
 5:4/0 = 0
+5:4/0/z_index = 1
 6:4/0 = 0
+6:4/0/z_index = 1
 7:4/0 = 0
+7:4/0/z_index = 1
 0:5/0 = 0
 1:5/0 = 0
 2:5/0 = 0
 3:5/0 = 0
 4:5/0 = 0
+4:5/0/z_index = 1
 5:5/0 = 0
+5:5/0/z_index = 1
 6:5/0 = 0
+6:5/0/z_index = 1
 7:5/0 = 0
+7:5/0/z_index = 1
 0:6/0 = 0
 1:6/0 = 0
 2:6/0 = 0
 3:6/0 = 0
 4:6/0 = 0
 5:6/0 = 0
+5:6/0/z_index = 1
 6:6/0 = 0
+6:6/0/z_index = 1
 7:6/0 = 0
+7:6/0/z_index = 1
 0:7/0 = 0
 1:7/0 = 0
 2:7/0 = 0
 3:7/0 = 0
 4:7/0 = 0
 5:7/0 = 0
+5:7/0/z_index = 1
 6:7/0 = 0
+6:7/0/z_index = 1
 7:7/0 = 0
+7:7/0/z_index = 1
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_g2hbc"]
 scenes/1/scene = ExtResource("2_t7fou")
@@ -90,6 +104,7 @@ scenes/5/scene = ExtResource("6_s4r4k")
 scenes/6/scene = ExtResource("7_vjxkk")
 scenes/7/scene = ExtResource("8_yn4kh")
 scenes/8/scene = ExtResource("9_mo40j")
+scenes/9/scene = ExtResource("10_74ru1")
 
 [resource]
 tile_size = Vector2i(32, 32)
