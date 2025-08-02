@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqxu4o4q33msv"]
+[gd_scene load_steps=4 format=3 uid="uid://ba7mlcoqdsy3p"]
 
-[ext_resource type="Script" uid="uid://c2e7o88fcq3xc" path="res://scripts/pressure_plate.gd" id="1_8v2wp"]
+[ext_resource type="Script" path="res://scripts/pressure_plate.gd" id="1_8v2wp"]
 [ext_resource type="Texture2D" uid="uid://co6otxooslo1r" path="res://assets/tileMap.png" id="2_sgiwk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oxbv2"]
 size = Vector2(32, 32)
 
 [node name="Area2D" type="Area2D"]
+collision_layer = 0
+collision_mask = 4
 script = ExtResource("1_8v2wp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
