@@ -35,7 +35,3 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-
-[connection signal="body_entered" from="TileMapLayer/Area2D" to="TileMapLayer/Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="TileMapLayer/Area2D" to="TileMapLayer/Area2D" method="_on_body_exited"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@57527" to="TileMapLayer/@Area2D@57527" method="win"]

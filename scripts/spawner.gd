@@ -2,6 +2,7 @@ extends Area2D
 
 @onready var ray_cast_2d : RayCast2D = $BoxRaycast
 @onready var level : Node2D = get_tree().get_root().get_node('level')
+@onready var tile_set : TileMapLayer = level.get_node('TileMapLayer')
 
 var player_scene : PackedScene = preload('res://scenes/tiles/Player.tscn')
 
@@ -26,7 +27,7 @@ func move(destination, limit):
 	ray_cast_2d.force_raycast_update()
 	if not ray_cast_2d.is_colliding():
 		position += destination
-	elif ray_cast_2d.get_collision_mask_value(2) : 
+	elif ray_cast_2d.get_collision_mask_value(3) : 
 		var movable = ray_cast_2d.get_collider()
 		if 'move' in movable:
 			if movable.move(destination, limit):
@@ -51,6 +52,6 @@ func undo():
 func end_loop():
 	var new_player = player_scene.instantiate()
 	new_player.position = position + Vector2(32,0)
-	level.add_child(new_player)
+	tile_set.add_child(new_player)
 	position = step_history[0]
 	init_history()

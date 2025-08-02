@@ -30,6 +30,8 @@ var can_create_clones : bool = false
 @onready var level : Node2D = get_tree().get_root().get_node('level')
 
 func _ready():
+	print(transform)
+	
 	remaining_steps = level.step_limit
 	push_limit = level.push_limit
 	can_create_clones = level.can_loop
@@ -50,9 +52,10 @@ func move(destination : Vector2):
 	ray_cast_2d.force_raycast_update()
 	if not ray_cast_2d.is_colliding():
 		position += destination
-	elif ray_cast_2d.get_collision_mask_value(2) : 
+	elif ray_cast_2d.get_collision_mask_value(3) : 
 		var movable = ray_cast_2d.get_collider()
 		if 'move' in movable:
+			print('player collided with box')
 			if movable.move(destination, push_limit):
 				position += destination
 			else: 

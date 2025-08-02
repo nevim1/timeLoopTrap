@@ -8,6 +8,7 @@ size = Vector2(30, 30)
 
 [node name="Area2D" type="Area2D"]
 collision_layer = 0
+collision_mask = 2
 script = ExtResource("1_66tlo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
