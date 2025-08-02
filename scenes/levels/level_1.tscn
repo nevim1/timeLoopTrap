@@ -78,3 +78,5 @@ offset_right = 1342.0
 offset_bottom = 276.875
 theme = ExtResource("4_x42e6")
 text = "You can undo with Z and reset the whole level with R"
+
+[connection signal="body_entered" from="TileMapLayer/Area2D" to="TileMapLayer/Area2D" method="win"]

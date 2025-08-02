@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://co6otxooslo1r" path="res://assets/tileMap.png" id="2_pxkor"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_05ejo"]
-size = Vector2(30, 30)
+size = Vector2(32, 32)
 
 [node name="Area2D" type="Area2D"]
 collision_layer = 0

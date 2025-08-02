@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://co6otxooslo1r" path="res://assets/tileMap.png" id="2_2laq6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kpjcp"]
-size = Vector2(32, 32)
+size = Vector2(30, 30)
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 1
