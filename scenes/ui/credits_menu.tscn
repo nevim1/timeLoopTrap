@@ -129,6 +129,22 @@ action_mode = 0
 text = "movement code"
 uri = "https://www.peanuts-code.com/en/tutorials/gd0010_2d_grid_based_movement/"
 
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_41cr8")
+theme_override_font_sizes/font_size = 18
+text = "USED FONT:"
+horizontal_alignment = 1
+
+[node name="LinkButton2" type="LinkButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_41cr8")
+theme_override_colors/font_color = Color(0.568627, 0.709804, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "PIXELATED ELEGANCE"
+uri = "https://www.fontspace.com/pixelated-elegance-font-f126145"
+
 [node name="Button" type="Button" parent="MarginContainer"]
 custom_minimum_size = Vector2(200, 75)
 layout_mode = 2
