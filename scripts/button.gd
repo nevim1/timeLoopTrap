@@ -16,8 +16,8 @@ func _ready() -> void:
 func _on_body_entered(_body):
 	if not activated:
 		activated = true
-		print(get_overlapping_areas())
-		print(get_overlapping_bodies())
+		for i in get_overlapping_areas():
+			i.state_change(true)
 		#collider.get_collider()
 		print('button is colliding')
 		button_detection.emit(true)

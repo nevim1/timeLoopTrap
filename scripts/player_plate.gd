@@ -5,9 +5,12 @@ signal player_detection
 func _ready() -> void:
 	player_detection.connect(level.player_detection)
 	
-func _on_body_entered(_body):
-	player_detection.emit(true)
-
-
 func _on_body_exited(_body):
-	player_detection.emit(false)
+	print(_body)
+	for i in get_overlapping_areas():
+		i.state_change(false)
+
+func _on_body_entered(_body):
+	print(_body)
+	for i in get_overlapping_areas():
+		i.state_change(true)

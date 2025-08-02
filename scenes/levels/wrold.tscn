@@ -27,8 +27,8 @@ tile_set = ExtResource("3_6g5jc")
 metadata/_edit_lock_ = true
 
 [connection signal="body_entered" from="TileMapLayer/Area2D" to="TileMapLayer/Area2D" method="win"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@31876" to="TileMapLayer/@Area2D@31876" method="_on_body_entered"]
-[connection signal="body_exited" from="TileMapLayer/@Area2D@31876" to="TileMapLayer/@Area2D@31876" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@44069" to="TileMapLayer/@Area2D@44069" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMapLayer/@Area2D@44069" to="TileMapLayer/@Area2D@44069" method="_on_body_exited"]
 [connection signal="body_entered" from="TileMapLayer/Button" to="TileMapLayer/Button" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@31880" to="TileMapLayer/@Area2D@31880" method="_on_body_entered"]
-[connection signal="body_exited" from="TileMapLayer/@Area2D@31880" to="TileMapLayer/@Area2D@31880" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@44073" to="TileMapLayer/@Area2D@44073" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMapLayer/@Area2D@44073" to="TileMapLayer/@Area2D@44073" method="_on_body_exited"]
