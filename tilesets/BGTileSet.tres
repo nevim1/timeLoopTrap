@@ -1,0 +1,104 @@
+[gd_resource type="TileSet" load_steps=8 format=3 uid="uid://neku2qaay4mt"]
+
+[ext_resource type="Texture2D" uid="uid://co6otxooslo1r" path="res://assets/tileMap.png" id="1_q0fwr"]
+[ext_resource type="PackedScene" uid="uid://bphwnm0fjwu0v" path="res://scenes/tiles/player_plate.tscn" id="2_0eo6y"]
+[ext_resource type="PackedScene" uid="uid://i5osvdp71ysm" path="res://scenes/tiles/finish_line.tscn" id="3_bmx5o"]
+[ext_resource type="PackedScene" uid="uid://bg856vrhcbhid" path="res://scenes/tiles/button.tscn" id="4_37xtr"]
+[ext_resource type="PackedScene" uid="uid://ba7mlcoqdsy3p" path="res://scenes/tiles/box_plate.tscn" id="5_3gjil"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_abirl"]
+texture = ExtResource("1_q0fwr")
+texture_region_size = Vector2i(32, 32)
+0:0/next_alternative_id = 3
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+2:0/next_alternative_id = 3
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+5:4/0/z_index = 1
+6:4/0 = 0
+6:4/0/z_index = 1
+7:4/0 = 0
+7:4/0/z_index = 1
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+4:5/0/z_index = 1
+5:5/0 = 0
+5:5/0/z_index = 1
+6:5/0 = 0
+6:5/0/z_index = 1
+7:5/0 = 0
+7:5/0/z_index = 1
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+5:6/0/z_index = 1
+6:6/0 = 0
+6:6/0/z_index = 1
+7:6/0 = 0
+7:6/0/z_index = 1
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+5:7/0/z_index = 1
+6:7/0 = 0
+6:7/0/z_index = 1
+7:7/0 = 0
+7:7/0/z_index = 1
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_g2hbc"]
+scenes/1/scene = ExtResource("2_0eo6y")
+scenes/4/scene = ExtResource("3_bmx5o")
+scenes/7/scene = ExtResource("4_37xtr")
+scenes/8/scene = ExtResource("5_3gjil")
+
+[resource]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+navigation_layer_0/layers = 1
+sources/0 = SubResource("TileSetAtlasSource_abirl")
+sources/1 = SubResource("TileSetScenesCollectionSource_g2hbc")

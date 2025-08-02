@@ -2,7 +2,7 @@ extends Area2D
 
 @onready var ray_cast_2d : RayCast2D = $BoxRaycast
 @onready var level : Node2D = get_tree().get_root().get_node('level')
-@onready var tile_set : TileMapLayer = level.get_node('TileMapLayer')
+@onready var tile_set : TileMapLayer = level.get_node('BGTileMapLayer')
 
 var player_scene : PackedScene = preload('res://scenes/tiles/Player.tscn')
 

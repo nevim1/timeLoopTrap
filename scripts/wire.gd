@@ -18,10 +18,8 @@ func state_change(state : bool):
 				i.state_change(state)
 
 		if wireState:
-			print('state now changed to true')
 			animation_player.set_frame(1)
 		else:
-			print('state now changed to false')
 			animation_player.set_frame(0)
 		
 

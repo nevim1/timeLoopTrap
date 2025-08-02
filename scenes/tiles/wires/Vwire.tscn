@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b20tw7x7xe062"]
 
-[ext_resource type="Texture2D" uid="uid://co6otxooslo1r" path="res://assets/tileMap.png" id="1_wqxoc"]
-[ext_resource type="Script" uid="uid://cht02kj6lxmfh" path="res://scripts/wire.gd" id="1_yxv1p"]
+[ext_resource type="Script" uid="uid://cht02kj6lxmfh" path="res://scripts/wire.gd" id="1_x05tm"]
+[ext_resource type="Texture2D" uid="uid://dng6oq64nmpl3" path="res://assets/wires.png" id="2_ri70k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yxv1p"]
 size = Vector2(32, 32)
@@ -9,12 +9,13 @@ size = Vector2(32, 32)
 [node name="Wire" type="Area2D"]
 collision_layer = 16
 collision_mask = 16
-script = ExtResource("1_yxv1p")
+script = ExtResource("1_x05tm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_yxv1p")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_wqxoc")
+texture = ExtResource("2_ri70k")
+vframes = 2
 region_enabled = true
-region_rect = Rect2(224, 128, 32, 32)
+region_rect = Rect2(128, 0, 32, 64)
