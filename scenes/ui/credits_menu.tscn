@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://csq0rejgrjioq"]
+[gd_scene load_steps=3 format=3 uid="uid://csq0rejgrjioq"]
 
 [ext_resource type="Script" uid="uid://bgwpsvafmgx30" path="res://scripts/credits_menu.gd" id="1_c6vh4"]
+[ext_resource type="Theme" uid="uid://n4po45dec42u" path="res://themes/menu_theme.tres" id="2_41cr8"]
 
 [node name="main menu" type="Control"]
 layout_mode = 3
@@ -30,11 +31,15 @@ size_flags_vertical = 0
 [node name="credits" type="Label" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
+theme = ExtResource("2_41cr8")
+theme_override_font_sizes/font_size = 27
 text = "CREDITS"
 horizontal_alignment = 1
 
 [node name="Creators" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_41cr8")
+theme_override_font_sizes/font_size = 18
 text = "CREATORS:"
 horizontal_alignment = 1
 
@@ -44,15 +49,20 @@ size_flags_vertical = 8
 
 [node name="names" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 
 [node name="nevim1" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/names"]
 layout_mode = 2
+theme = ExtResource("2_41cr8")
+theme_override_font_sizes/font_size = 18
 text = "nevim1"
 horizontal_alignment = 1
 
 [node name="VeejayIam" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/names"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
+theme = ExtResource("2_41cr8")
+theme_override_font_sizes/font_size = 18
 text = "VeejayIam"
 horizontal_alignment = 1
 
@@ -61,12 +71,18 @@ layout_mode = 2
 
 [node name="nevim itch link" type="LinkButton" parent="MarginContainer/VBoxContainer/HBoxContainer/itch profiles"]
 layout_mode = 2
+theme = ExtResource("2_41cr8")
+theme_override_colors/font_color = Color(0.567622, 0.708996, 1, 1)
+theme_override_font_sizes/font_size = 18
 action_mode = 0
 text = "itch profile"
 uri = "https://itch.io/profile/nevim1"
 
 [node name="veejay itch link" type="LinkButton" parent="MarginContainer/VBoxContainer/HBoxContainer/itch profiles"]
 layout_mode = 2
+theme = ExtResource("2_41cr8")
+theme_override_colors/font_color = Color(0.567622, 0.708996, 1, 1)
+theme_override_font_sizes/font_size = 18
 action_mode = 0
 text = "itch profile"
 uri = "https://veejayiam.itch.io/"
@@ -80,33 +96,62 @@ layout_mode = 2
 
 [node name="nevim git link" type="LinkButton" parent="MarginContainer/VBoxContainer/HBoxContainer/github profiles"]
 layout_mode = 2
+theme = ExtResource("2_41cr8")
+theme_override_colors/font_color = Color(0.568627, 0.709804, 1, 1)
+theme_override_font_sizes/font_size = 18
 action_mode = 0
 text = "github profile"
 uri = "https://github.com/nevim1"
 
 [node name="veejay git link" type="LinkButton" parent="MarginContainer/VBoxContainer/HBoxContainer/github profiles"]
 layout_mode = 2
+theme = ExtResource("2_41cr8")
+theme_override_colors/font_color = Color(0.568627, 0.709804, 1, 1)
+theme_override_font_sizes/font_size = 18
 action_mode = 0
 text = "github profile"
 uri = "https://github.com/VeejayIam"
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_41cr8")
+theme_override_font_sizes/font_size = 18
 text = "USED CODE:"
 horizontal_alignment = 1
 
 [node name="LinkButton" type="LinkButton" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme = ExtResource("2_41cr8")
+theme_override_colors/font_color = Color(0.568627, 0.709804, 1, 1)
+theme_override_font_sizes/font_size = 18
 action_mode = 0
 text = "movement code"
 uri = "https://www.peanuts-code.com/en/tutorials/gd0010_2d_grid_based_movement/"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_41cr8")
+theme_override_font_sizes/font_size = 18
+text = "USED FONT:"
+horizontal_alignment = 1
+
+[node name="LinkButton2" type="LinkButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_41cr8")
+theme_override_colors/font_color = Color(0.568627, 0.709804, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "PIXELATED ELEGANCE"
+uri = "https://www.fontspace.com/pixelated-elegance-font-f126145"
 
 [node name="Button" type="Button" parent="MarginContainer"]
 custom_minimum_size = Vector2(200, 75)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+theme = ExtResource("2_41cr8")
+theme_override_font_sizes/font_size = 27
 action_mode = 0
 text = "back"
 

@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bc6mlfem5nhyv"]
+[gd_scene load_steps=8 format=3 uid="uid://bc6mlfem5nhyv"]
 
 [ext_resource type="Script" uid="uid://b2pljpijfwm6w" path="res://scripts/levels_menu.gd" id="1_r3otx"]
 [ext_resource type="PackedScene" uid="uid://ber1ittvitqas" path="res://scenes/ui/level_box_ui.tscn" id="2_grwcp"]
+[ext_resource type="Theme" uid="uid://n4po45dec42u" path="res://themes/menu_theme.tres" id="2_sggmd"]
 [ext_resource type="Texture2D" uid="uid://cx5rc82rxtpf3" path="res://assets/level_1_icon.jpg" id="3_5r7aj"]
 [ext_resource type="Texture2D" uid="uid://6f6q50df2bf0" path="res://assets/level_2_icon.jpg" id="4_tkrcc"]
 [ext_resource type="Texture2D" uid="uid://cxljtmrl34t2c" path="res://assets/level_3_icon.jpg" id="5_tkrcc"]
@@ -34,6 +35,8 @@ size_flags_horizontal = 0
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+theme = ExtResource("2_sggmd")
+theme_override_font_sizes/font_size = 18
 text = "levels:"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HSplitContainer"]
@@ -179,6 +182,8 @@ custom_minimum_size = Vector2(200, 75)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
+theme = ExtResource("2_sggmd")
+theme_override_font_sizes/font_size = 18
 text = "back"
 
 [connection signal="pressed" from="MarginContainer/Back button" to="." method="_on_back_button_pressed"]
