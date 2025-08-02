@@ -185,5 +185,5 @@ collide_with_areas = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.9375, 0.9375)
 sprite_frames = SubResource("SpriteFrames_224hu")
-frame_progress = 0.72836
+frame_progress = 0.559468
 speed_scale = 2.0

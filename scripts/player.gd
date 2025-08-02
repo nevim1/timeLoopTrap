@@ -97,7 +97,7 @@ func undo():
 func end_loop():
 	if not clone:
 		clone = true
-		player_sprite.modulate = Color(1,1,1,0.5)
+		player_sprite.modulate = Color(0,0.5,1,0.5)
 	
 	position = step_history[0]
 	replay_step = 0

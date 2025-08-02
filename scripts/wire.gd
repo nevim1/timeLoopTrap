@@ -17,12 +17,12 @@ func state_change(state : bool):
 			if 'state_change' in i:
 				i.state_change(state)
 
-	if wireState:
-		print('state now changed to true')
-		animation_player.set_frame(1)
-	else:
-		print('state now changed to false')
-		animation_player.set_frame(0)
+		if wireState:
+			print('state now changed to true')
+			animation_player.set_frame(1)
+		else:
+			print('state now changed to false')
+			animation_player.set_frame(0)
 		
 
 func end_loop():
