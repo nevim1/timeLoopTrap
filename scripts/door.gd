@@ -5,6 +5,8 @@ extends Area2D
 
 func _ready() -> void:
 	level.button_pressed.connect(button_pressed)
+	level.b_plate_pressed.connect(b_plate_pressed)
+	level.p_plate_pressed.connect(p_plate_pressed)
 	set_collision_layer_value(4, true)
 
 func open_door():
@@ -20,3 +22,9 @@ func close_door():
 func button_pressed():
 	print('doors got signal that button was pressed')
 	open_door()
+	
+func b_plate_pressed():
+	print("doors got signal that pressure plate was pressed")
+	
+func p_plate_pressed():
+	print("doors got signal that player plate was pressed")

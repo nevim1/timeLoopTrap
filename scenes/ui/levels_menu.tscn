@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bc6mlfem5nhyv"]
+[gd_scene load_steps=7 format=3 uid="uid://bc6mlfem5nhyv"]
 
 [ext_resource type="Script" uid="uid://b2pljpijfwm6w" path="res://scripts/levels_menu.gd" id="1_r3otx"]
 [ext_resource type="PackedScene" uid="uid://ber1ittvitqas" path="res://scenes/ui/level_box_ui.tscn" id="2_grwcp"]
 [ext_resource type="Texture2D" uid="uid://cx5rc82rxtpf3" path="res://assets/level_1_icon.jpg" id="3_5r7aj"]
 [ext_resource type="Texture2D" uid="uid://6f6q50df2bf0" path="res://assets/level_2_icon.jpg" id="4_tkrcc"]
 [ext_resource type="Texture2D" uid="uid://cxljtmrl34t2c" path="res://assets/level_3_icon.jpg" id="5_tkrcc"]
+[ext_resource type="Texture2D" uid="uid://caq5oi8kdqt3d" path="res://assets/level_4_icon.jpg" id="6_rk57y"]
 
 [node name="levels menu" type="Control"]
 layout_mode = 3
@@ -80,6 +81,20 @@ region_rect = Rect2(847.693, 482.578, 235, 183)
 [node name="Label" parent="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer3/VBoxContainer/Sprite2D" index="0"]
 text = "LEVEL: 3"
 
+[node name="VBoxContainer4" type="VBoxContainer" parent="MarginContainer/HSplitContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="levelBoxUI" parent="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer4" instance=ExtResource("2_grwcp")]
+layout_mode = 2
+path = "res://scenes/levels/level_4.tscn"
+
+[node name="Sprite2D" parent="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer4/levelBoxUI" index="1"]
+texture = ExtResource("6_rk57y")
+region_rect = Rect2(841, 595.735, 235, 183)
+
+[node name="Label" parent="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer4/levelBoxUI/Sprite2D" index="0"]
+text = "LEVEL: 4"
+
 [node name="Back button" type="Button" parent="MarginContainer"]
 custom_minimum_size = Vector2(200, 75)
 layout_mode = 2
@@ -92,3 +107,4 @@ text = "back"
 [editable path="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
 [editable path="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer2/VBoxContainer2"]
 [editable path="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer3/VBoxContainer"]
+[editable path="MarginContainer/HSplitContainer/HBoxContainer/VBoxContainer4/levelBoxUI"]

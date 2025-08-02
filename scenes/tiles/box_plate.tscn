@@ -10,8 +10,8 @@ size = Vector2(32, 32)
 script = ExtResource("1_8v2wp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(-16, -16)
-scale = Vector2(1, 1)
 texture = ExtResource("2_sgiwk")
 centered = false
 region_enabled = true

@@ -21,6 +21,8 @@ signal undo
 signal reset
 signal end_loop
 signal button_pressed
+signal b_plate_pressed
+signal p_plate_pressed
 
 func _ready():
 	ui_steps_node = get_node("UI")
@@ -59,3 +61,12 @@ func on_loops_depleted():
 func button_detection(pressed : bool):
 	print('level got that button was pressed, sending signal')
 	button_pressed.emit()
+	
+func box_detection(pressed : bool):
+	print('level got that pressure plate was pressed, sending signal')
+	b_plate_pressed.emit()
+	
+func player_detection(pressed : bool):
+	print('level got that player plate was pressed, sending signal')
+	p_plate_pressed.emit()
+	
