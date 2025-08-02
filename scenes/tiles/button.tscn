@@ -6,15 +6,15 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xb3yb"]
 size = Vector2(32, 32)
 
-[node name="Area2D2" type="Area2D"]
+[node name="Button" type="Area2D"]
 collision_layer = 0
-collision_mask = 2
+collision_mask = 18
 script = ExtResource("1_41vnd")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="ButtonCollider" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_xb3yb")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="ButtonSprite" type="Sprite2D" parent="."]
 position = Vector2(-16, -16)
 texture = ExtResource("2_qc2to")
 centered = false
