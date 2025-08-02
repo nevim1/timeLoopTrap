@@ -1,5 +1,4 @@
 extends Area2D
-signal button_detection
 
 @onready var animation_player = $ButtonSprite
 @onready var collider : CollisionShape2D = $ButtonCollider
@@ -9,7 +8,6 @@ signal button_detection
 var activated : bool = false
 
 func _ready() -> void:
-	button_detection.connect(level.button_detection)
 	level.end_loop.connect(end_loop)
 	animation_player.set_frame(0)
 
@@ -17,10 +15,9 @@ func _on_body_entered(_body):
 	if not activated:
 		activated = true
 		for i in get_overlapping_areas():
-			i.state_change(true)
-		#collider.get_collider()
-		print('button is colliding')
-		button_detection.emit(true)
+			if 'state_change' in i:
+				i.state_change(true)
+
 		animation_player.set_frame(1)
 
 func end_loop():

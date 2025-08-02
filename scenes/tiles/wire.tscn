@@ -1,13 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://b20tw7x7xe062"]
+[gd_scene load_steps=4 format=3 uid="uid://b20tw7x7xe062"]
 
 [ext_resource type="Texture2D" uid="uid://co6otxooslo1r" path="res://assets/tileMap.png" id="1_wqxoc"]
+[ext_resource type="Script" uid="uid://cht02kj6lxmfh" path="res://scripts/wire.gd" id="1_yxv1p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yxv1p"]
-size = Vector2(33, 33)
+size = Vector2(32, 32)
 
 [node name="Wire" type="Area2D"]
 collision_layer = 16
 collision_mask = 16
+script = ExtResource("1_yxv1p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_yxv1p")

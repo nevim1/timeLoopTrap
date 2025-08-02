@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v6xrn"]
 size = Vector2(32, 32)
 
-[node name="Area2D" type="Area2D"]
+[node name="Door" type="Area2D"]
 z_index = 2
 collision_layer = 24
 collision_mask = 0

@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oxbv2"]
 size = Vector2(32, 32)
 
-[node name="Area2D" type="Area2D"]
+[node name="BoxPlate" type="Area2D"]
 collision_layer = 0
 collision_mask = 20
 script = ExtResource("1_8v2wp")
