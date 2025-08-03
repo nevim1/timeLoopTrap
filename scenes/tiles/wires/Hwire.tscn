@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dng6oq64nmpl3" path="res://assets/wires.png" id="2_8b71l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yxv1p"]
-size = Vector2(32, 32)
+size = Vector2(32, 14)
 
 [node name="Wire" type="Area2D"]
 collision_layer = 16

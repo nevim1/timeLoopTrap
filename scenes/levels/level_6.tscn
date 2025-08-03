@@ -86,4 +86,4 @@ text = "<-- This Is MY cloning
 
 [connection signal="body_entered" from="BGTileMapLayer/Area2D" to="BGTileMapLayer/Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="BGTileMapLayer/Area2D" to="BGTileMapLayer/Area2D" method="_on_body_exited"]
-[connection signal="body_entered" from="BGTileMapLayer/@Area2D@22086" to="BGTileMapLayer/@Area2D@22086" method="win"]
+[connection signal="body_entered" from="BGTileMapLayer/@Area2D@34490" to="BGTileMapLayer/@Area2D@34490" method="win"]

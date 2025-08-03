@@ -8,7 +8,8 @@
 
 [node name="level" type="Node2D"]
 script = ExtResource("1_805pq")
-step_limit = 16
+loop_limit = 2
+step_limit = 22
 can_loop = true
 
 [node name="UI" parent="." instance=ExtResource("2_ki8mi")]
@@ -55,9 +56,3 @@ text = "Now you are on your own.
 Good luck ;)"
 horizontal_alignment = 1
 autowrap_mode = 2
-
-[connection signal="area_entered" from="BGTileMapLayer/BoxPlate" to="BGTileMapLayer/BoxPlate" method="_on_area_entered"]
-[connection signal="area_exited" from="BGTileMapLayer/BoxPlate" to="BGTileMapLayer/BoxPlate" method="_on_area_exited"]
-[connection signal="body_entered" from="BGTileMapLayer/Area2D" to="BGTileMapLayer/Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="BGTileMapLayer/Area2D" to="BGTileMapLayer/Area2D" method="_on_body_exited"]
-[connection signal="body_entered" from="BGTileMapLayer/@Area2D@361634" to="BGTileMapLayer/@Area2D@361634" method="win"]

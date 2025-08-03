@@ -61,7 +61,7 @@ offset_top = 688.0
 offset_right = 688.0
 offset_bottom = 820.0
 theme = ExtResource("4_fiq81")
-text = "You also now have only 3 spare steps.
+text = "You also now have only a few spare steps.
 ...So be efficient  ;)"
 horizontal_alignment = 1
 autowrap_mode = 2

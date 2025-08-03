@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dng6oq64nmpl3" path="res://assets/wires.png" id="2_xp2mt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yxv1p"]
-size = Vector2(32, 32)
+size = Vector2(23, 23)
 
 [node name="Wire" type="Area2D"]
 collision_layer = 16
@@ -12,6 +12,7 @@ collision_mask = 16
 script = ExtResource("1_gettd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.5, -4.5)
 shape = SubResource("RectangleShape2D_yxv1p")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
