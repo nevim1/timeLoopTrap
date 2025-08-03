@@ -76,6 +76,3 @@ theme_override_font_sizes/font_size = 25
 text = "It just opens doors"
 horizontal_alignment = 1
 autowrap_mode = 2
-
-[connection signal="body_entered" from="BGTileMapLayer/Button" to="BGTileMapLayer/Button" method="_on_body_entered"]
-[connection signal="body_entered" from="BGTileMapLayer/Area2D" to="BGTileMapLayer/Area2D" method="win"]

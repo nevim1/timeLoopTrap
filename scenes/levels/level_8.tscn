@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://bvxw47m74mhfo"]
+[gd_scene load_steps=6 format=4 uid="uid://bvxw47m74mhfo"]
 
 [ext_resource type="Script" uid="uid://cra8iujnxxcn8" path="res://scripts/level.gd" id="1_805pq"]
 [ext_resource type="PackedScene" uid="uid://bb0u070prx84x" path="res://scenes/ui/ui.tscn" id="2_ki8mi"]
 [ext_resource type="TileSet" uid="uid://neku2qaay4mt" path="res://tilesets/BGTileSet.tres" id="3_u61dc"]
 [ext_resource type="TileSet" uid="uid://csuskmmyxj3qe" path="res://tilesets/FGTileSet.tres" id="4_ki8mi"]
+[ext_resource type="Theme" uid="uid://2scudmu5elmn" path="res://themes/onGroubndTextTheme.tres" id="5_u61dc"]
 
 [node name="level" type="Node2D"]
 script = ExtResource("1_805pq")
@@ -42,3 +43,21 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="tutorial_popups"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 352.0
+offset_right = 708.0
+offset_bottom = 439.0
+theme = ExtResource("5_u61dc")
+text = "Now you are on your own.
+Good luck ;)"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[connection signal="area_entered" from="BGTileMapLayer/BoxPlate" to="BGTileMapLayer/BoxPlate" method="_on_area_entered"]
+[connection signal="area_exited" from="BGTileMapLayer/BoxPlate" to="BGTileMapLayer/BoxPlate" method="_on_area_exited"]
+[connection signal="body_entered" from="BGTileMapLayer/Area2D" to="BGTileMapLayer/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="BGTileMapLayer/Area2D" to="BGTileMapLayer/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="BGTileMapLayer/@Area2D@361634" to="BGTileMapLayer/@Area2D@361634" method="win"]

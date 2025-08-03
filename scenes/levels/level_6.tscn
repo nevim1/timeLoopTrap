@@ -59,12 +59,16 @@ autowrap_mode = 2
 
 [node name="Label2" type="Label" parent="tutorial_popups"]
 layout_mode = 0
-offset_left = 408.0
-offset_top = 480.0
-offset_right = 856.0
-offset_bottom = 612.0
+offset_left = 416.0
+offset_top = 432.0
+offset_right = 864.0
+offset_bottom = 786.25
 theme = ExtResource("5_i0fhw")
-text = "You can press Q to trap yourself in a time loop. And clone will appear in front of MY cloning machine."
+text = "You can press Q to trap yourself in a time loop. 
+
+Then a clone will appear in front of MY cloning machine. 
+
+On the bright side YOU get to control the clone."
 horizontal_alignment = 1
 autowrap_mode = 2
 
