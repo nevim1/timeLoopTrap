@@ -1,13 +1,14 @@
-[gd_scene load_steps=5 format=4 uid="uid://bf6nd21atnpqk"]
+[gd_scene load_steps=6 format=4 uid="uid://bf6nd21atnpqk"]
 
 [ext_resource type="Script" uid="uid://cra8iujnxxcn8" path="res://scripts/level.gd" id="1_ogj6a"]
 [ext_resource type="PackedScene" uid="uid://bb0u070prx84x" path="res://scenes/ui/ui.tscn" id="2_anwe6"]
 [ext_resource type="TileSet" uid="uid://neku2qaay4mt" path="res://tilesets/BGTileSet.tres" id="3_rej77"]
 [ext_resource type="TileSet" uid="uid://csuskmmyxj3qe" path="res://tilesets/FGTileSet.tres" id="4_ogj6a"]
+[ext_resource type="Theme" uid="uid://2scudmu5elmn" path="res://themes/onGroubndTextTheme.tres" id="5_anwe6"]
 
 [node name="level" type="Node2D"]
 script = ExtResource("1_ogj6a")
-step_limit = 16
+step_limit = 8
 
 [node name="UI" parent="." instance=ExtResource("2_anwe6")]
 z_index = 4
@@ -41,3 +42,16 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="tutorial_popups"]
+layout_mode = 0
+offset_left = 531.0
+offset_top = 340.0
+offset_right = 932.0
+offset_bottom = 471.625
+theme = ExtResource("5_anwe6")
+text = "They say dont push a button if you dont know what it does... unless?"
+autowrap_mode = 2
+
+[connection signal="body_entered" from="BGTileMapLayer/Button" to="BGTileMapLayer/Button" method="_on_body_entered"]
+[connection signal="body_entered" from="BGTileMapLayer/Area2D" to="BGTileMapLayer/Area2D" method="win"]

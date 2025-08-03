@@ -7,7 +7,7 @@
 
 [node name="level" type="Node2D"]
 script = ExtResource("1_dswqx")
-step_limit = 16
+step_limit = 14
 
 [node name="UI" parent="." instance=ExtResource("2_laj7o")]
 z_index = 4
@@ -41,3 +41,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[connection signal="area_entered" from="BGTileMapLayer/BoxPlate" to="BGTileMapLayer/BoxPlate" method="_on_area_entered"]
+[connection signal="area_exited" from="BGTileMapLayer/BoxPlate" to="BGTileMapLayer/BoxPlate" method="_on_area_exited"]
+[connection signal="body_entered" from="BGTileMapLayer/Area2D" to="BGTileMapLayer/Area2D" method="win"]

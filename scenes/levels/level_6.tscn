@@ -7,7 +7,8 @@
 
 [node name="level" type="Node2D"]
 script = ExtResource("1_g44gb")
-step_limit = 16
+loop_limit = 1
+step_limit = 14
 can_loop = true
 
 [node name="UI" parent="." instance=ExtResource("2_741xk")]
@@ -42,3 +43,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[connection signal="body_entered" from="BGTileMapLayer/Area2D" to="BGTileMapLayer/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="BGTileMapLayer/Area2D" to="BGTileMapLayer/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="BGTileMapLayer/@Area2D@47207" to="BGTileMapLayer/@Area2D@47207" method="win"]
