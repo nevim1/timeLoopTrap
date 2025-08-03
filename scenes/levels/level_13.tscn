@@ -7,7 +7,7 @@
 
 [node name="level" type="Node2D"]
 script = ExtResource("1_2mki6")
-step_limit = 16
+step_limit = 44
 can_loop = true
 
 [node name="UI" parent="." instance=ExtResource("2_y6ise")]

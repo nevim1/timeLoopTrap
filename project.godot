@@ -13,14 +13,17 @@ config_version=5
 config/name="Timeloop Trap"
 run/main_scene="uid://diapffo61qq3v"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
-boot_splash/image="uid://c1ahtdqg4rla1"
+boot_splash/bg_color=Color(0.356863, 0.356863, 0.356863, 1)
+boot_splash/image="uid://bekil5dt7rvne"
 config/icon="res://misc/logo.png"
+config/windows_native_icon="res://misc/logo.ico"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=3
+window/size/borderless=true
 
 [dotnet]
 
@@ -101,3 +104,4 @@ ingame_menu={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
