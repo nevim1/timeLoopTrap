@@ -34,7 +34,7 @@ custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 theme = ExtResource("2_fe2o3")
 theme_override_font_sizes/font_size = 45
-text = "GAME TITLE"
+text = "TIMELOOP TRAP"
 horizontal_alignment = 1
 
 [node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
@@ -65,6 +65,15 @@ theme = ExtResource("2_fe2o3")
 theme_override_font_sizes/font_size = 27
 text = "exit
 "
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+size_flags_stretch_ratio = 21.8
+theme = ExtResource("2_fe2o3")
+theme_override_font_sizes/font_size = 36
+text = "MADE FOR GMTK GAMEJAM 2025"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]

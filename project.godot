@@ -10,15 +10,17 @@ config_version=5
 
 [application]
 
-config/name="2025 GMTK game jam"
+config/name="Timeloop Trap"
 run/main_scene="uid://diapffo61qq3v"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
-config/icon="res://misc/icon.svg"
+boot_splash/image="uid://c1ahtdqg4rla1"
+config/icon="res://misc/logo.png"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=3
 
 [dotnet]
 
