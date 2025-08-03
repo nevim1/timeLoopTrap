@@ -5,10 +5,11 @@ extends Control
 
 @onready var level = get_tree().get_root().get_node('level')
 
-
-
 func _ready() -> void:
 	loopLabel.visible = level.can_loop
 
 func update_steps(value):
 	stepLabel.text = 'Steps left: ' + str(value)
+
+func update_loops(value):
+	loopLabel.text = 'Loops left: ' + str(value)

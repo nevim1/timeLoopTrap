@@ -9,6 +9,7 @@ var activated : bool = false
 
 func _ready() -> void:
 	level.end_loop.connect(end_loop)
+	level.reset_loop.connect(reset_loop)
 	animation_player.set_frame(0)
 
 func _on_body_entered(_body):
@@ -23,3 +24,6 @@ func _on_body_entered(_body):
 func end_loop():
 	activated = false
 	animation_player.set_frame(0)
+
+func reset_loop():
+	end_loop()

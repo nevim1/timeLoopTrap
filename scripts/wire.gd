@@ -8,6 +8,7 @@ var wireState : bool = false
 
 func _ready() -> void:
 	level.end_loop.connect(end_loop)
+	level.reset_loop.connect(reset_loop)
 	wireState = false
 
 func state_change(state : bool):
@@ -26,3 +27,6 @@ func state_change(state : bool):
 func end_loop():
 	animation_player.set_frame(0)
 	wireState = false
+
+func reset_loop():
+	end_loop()

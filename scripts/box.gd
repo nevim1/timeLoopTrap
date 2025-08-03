@@ -9,6 +9,7 @@ func _ready():
 	level.undo.connect(undo)
 	level.step.connect(step)
 	level.end_loop.connect(end_loop)
+	level.reset_loop.connect(reset_loop)
 	init_history()
 	
 func init_history():
@@ -50,3 +51,6 @@ func undo():
 func end_loop():
 	position = step_history[0]
 	init_history()
+
+func reset_loop():
+	end_loop()		#well the code is the same so why not?

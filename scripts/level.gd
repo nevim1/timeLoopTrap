@@ -19,6 +19,7 @@ var step_counter = 0
 signal step
 signal undo
 signal reset
+signal reset_loop
 signal end_loop
 
 func _ready():
@@ -33,18 +34,28 @@ func _unhandled_input(event):
 		print('level was reset')
 		get_tree().reload_current_scene()
 		
+	elif event.is_action_pressed("reset_loop"):
+		step_counter = 0
+		reset_loop.emit()
+		
 	elif event.is_action_pressed("undo"):
 		if step_counter != 0:
 			step_counter -= 1
 			undo.emit()
 		
-	elif event.is_action_pressed("end_loop") and can_loop:
+	elif false and event.is_action_pressed("end_loop") and can_loop:
 		step_counter = 0
 		end_loop.emit()
 
 func force_step():
 	step_counter += 1
 	step.emit()
+
+func force_end_loop():
+	step_counter = 0
+	end_loop.emit()
+
+
 
 
 func on_loop_ended():

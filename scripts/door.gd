@@ -5,6 +5,7 @@ extends Area2D
 
 func _ready() -> void:
 	level.end_loop.connect(end_loop)
+	level.reset_loop.connect(reset_loop)
 	animation_player.set_frame(0)
 	set_collision_layer_value(4, true)
 
@@ -25,3 +26,6 @@ func state_change(state : bool):
 func end_loop():
 	animation_player.set_frame(0)
 	set_collision_layer_value(4, true)
+
+func reset_loop():
+	end_loop()

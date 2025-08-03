@@ -19,6 +19,7 @@ var step_delta_history : Array[Vector2] = []
 var replay_step : int = 0
 
 var push_limit : int = -1
+var remaining_loops : int
 var remaining_steps : int
 
 var can_create_clones : bool = false
@@ -26,20 +27,25 @@ var can_create_clones : bool = false
 # Reference to the RayCast2D node
 @onready var ray_cast_2d: RayCast2D = $PlayerRaycast
 @onready var player_sprite : Sprite2D = $PlayerSprite
-@onready var ui_steps_node = get_tree().get_root().get_node('level/UI')
+@onready var level_ui = get_tree().get_root().get_node('level/UI')
 @onready var level : Node2D = get_tree().get_root().get_node('level')
 
 func _ready():
 	remaining_steps = level.step_limit
 	push_limit = level.push_limit
 	can_create_clones = level.can_loop
+	remaining_loops = level.loop_limit
 	
 	level.undo.connect(undo)
 	level.end_loop.connect(end_loop)
 	level.step.connect(step)
+	level.reset_loop.connect(reset_loop)
 	
-	ui_steps_node.update_steps(remaining_steps)
+	level_ui.update_steps(remaining_steps)
+	level_ui.update_loops(remaining_loops)
+	init_history()
 	
+func init_history():
 	step_history.append(position)
 	
 
@@ -69,7 +75,15 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 	if remaining_steps == 0:
 		return
+	
+	if event.is_action_pressed("end_loop") and remaining_loops > 0:
 		
+		remaining_loops -= 1
+		level_ui.update_loops(remaining_loops)
+		level.loop_limit = remaining_loops
+		level.step_limit = remaining_steps
+		level.force_end_loop()
+	
 	for action in inputs.keys():
 		if event.is_action_pressed(action):
 			var destination = inputs[action] * grid_size
@@ -77,7 +91,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				step_history.append(position)
 				step_delta_history.append(destination)
 				remaining_steps -= 1
-				ui_steps_node.update_steps(remaining_steps)
+				level_ui.update_steps(remaining_steps)
 				level.force_step()
 				return
 
@@ -92,10 +106,11 @@ func undo():
 			step_delta_history.pop_back()
 			position = last_position
 			remaining_steps += 1
-			ui_steps_node.update_steps(remaining_steps)
+			level_ui.update_steps(remaining_steps)
 		
 func end_loop():
 	if not clone:
+		#level.step_limit = remaining_steps
 		clone = true
 		player_sprite.modulate = Color(0,0.5,1,0.5)
 	
@@ -109,3 +124,14 @@ func step():
 		else:
 			move(step_history[((replay_step+1)%len(step_history))] - step_history[((replay_step)%len(step_history))])
 		replay_step += 1
+		
+func reset_loop():
+	position = step_history[0]
+	replay_step = 0
+	if not clone:
+		remaining_steps += len(step_history)-1
+		level_ui.update_steps(remaining_steps)
+		step_history = []
+		init_history()
+
+	

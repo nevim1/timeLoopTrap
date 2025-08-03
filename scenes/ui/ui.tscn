@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dacupt4cucr2h" path="res://scripts/ingame_ui.gd" id="1_nt7q6"]
 [ext_resource type="Script" uid="uid://h04nv6yy1pjf" path="res://scripts/ui.gd" id="1_x4jx1"]
-[ext_resource type="Theme" uid="uid://n4po45dec42u" path="res://themes/menu_theme.tres" id="3_aac20"]
+[ext_resource type="Theme" path="res://themes/menu_theme.tres" id="3_aac20"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
