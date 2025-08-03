@@ -3,12 +3,14 @@ extends Area2D
 @onready var ray_cast_2d : RayCast2D = $BoxRaycast
 @onready var level : Node2D = get_tree().get_root().get_node('level')
 @onready var tile_set : TileMapLayer = level.get_node('BGTileMapLayer')
+@onready var animation_player : AnimatedSprite2D = $AnimatedSprite2D
 
 var player_scene : PackedScene = preload('res://scenes/tiles/Player.tscn')
 
 var step_history : Array[Vector2] = []
 
 func _ready():
+	animation_player.play("default_1")
 	level.undo.connect(undo)
 	level.step.connect(step)
 	level.end_loop.connect(end_loop)

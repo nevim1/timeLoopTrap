@@ -170,6 +170,7 @@ animations = [{
 }]
 
 [node name="spawner" type="Area2D"]
+z_index = 2
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("1_fx4f6")
@@ -185,5 +186,5 @@ collide_with_areas = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.9375, 0.9375)
 sprite_frames = SubResource("SpriteFrames_224hu")
-frame_progress = 0.559468
+frame_progress = 0.135854
 speed_scale = 2.0
