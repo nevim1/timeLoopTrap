@@ -56,11 +56,12 @@ autowrap_mode = 2
 
 [node name="Label2" type="Label" parent="tutorial_popups"]
 layout_mode = 0
-offset_left = 384.0
-offset_top = 670.0
-offset_right = 640.0
-offset_bottom = 802.0
+offset_left = 336.0
+offset_top = 688.0
+offset_right = 688.0
+offset_bottom = 820.0
 theme = ExtResource("4_fiq81")
-text = "I also removed your spare steps, so be efficient  :)"
+text = "You also now have only 3 spare steps.
+...So be efficient  ;)"
 horizontal_alignment = 1
 autowrap_mode = 2

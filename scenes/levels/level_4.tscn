@@ -65,5 +65,17 @@ text = "Maybe they're wrong.
 Try it."
 horizontal_alignment = 1
 
+[node name="Label3" type="Label" parent="tutorial_popups"]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 488.0
+offset_right = 1024.0
+offset_bottom = 600.0
+theme = ExtResource("5_anwe6")
+theme_override_font_sizes/font_size = 25
+text = "It just opens doors"
+horizontal_alignment = 1
+autowrap_mode = 2
+
 [connection signal="body_entered" from="BGTileMapLayer/Button" to="BGTileMapLayer/Button" method="_on_body_entered"]
 [connection signal="body_entered" from="BGTileMapLayer/Area2D" to="BGTileMapLayer/Area2D" method="win"]

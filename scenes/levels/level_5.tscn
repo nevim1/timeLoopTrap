@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://xl7aq2rn1xpn"]
+[gd_scene load_steps=6 format=4 uid="uid://xl7aq2rn1xpn"]
 
 [ext_resource type="Script" uid="uid://cra8iujnxxcn8" path="res://scripts/level.gd" id="1_dswqx"]
 [ext_resource type="PackedScene" uid="uid://bb0u070prx84x" path="res://scenes/ui/ui.tscn" id="2_laj7o"]
 [ext_resource type="TileSet" uid="uid://neku2qaay4mt" path="res://tilesets/BGTileSet.tres" id="3_fi56y"]
 [ext_resource type="TileSet" uid="uid://csuskmmyxj3qe" path="res://tilesets/FGTileSet.tres" id="4_laj7o"]
+[ext_resource type="Theme" uid="uid://2scudmu5elmn" path="res://themes/onGroubndTextTheme.tres" id="5_fi56y"]
 
 [node name="level" type="Node2D"]
 script = ExtResource("1_dswqx")
@@ -41,3 +42,40 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="tutorial_popups"]
+layout_mode = 0
+offset_left = 532.0
+offset_top = 744.0
+offset_right = 876.0
+offset_bottom = 831.0
+theme = ExtResource("5_fi56y")
+text = "Bring your friend here,
+I guarantee he'll like it."
+horizontal_alignment = 1
+autowrap_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="Label2" type="Label" parent="tutorial_popups"]
+layout_mode = 0
+offset_left = 584.0
+offset_top = 235.0
+offset_right = 824.0
+offset_bottom = 322.0
+theme = ExtResource("5_fi56y")
+text = "Here, have your old friend back."
+horizontal_alignment = 1
+autowrap_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="Label4" type="Label" parent="tutorial_popups"]
+layout_mode = 0
+offset_left = 916.0
+offset_top = 480.0
+offset_right = 1004.0
+offset_bottom = 602.0
+theme = ExtResource("5_fi56y")
+theme_override_font_sizes/font_size = 25
+text = "He didn't like it."
+horizontal_alignment = 1
+autowrap_mode = 2

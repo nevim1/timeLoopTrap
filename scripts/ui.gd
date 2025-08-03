@@ -12,4 +12,4 @@ func update_steps(value):
 	stepLabel.text = 'Steps left: ' + str(value)
 
 func update_loops(value):
-	loopLabel.text = 'Loops left: ' + str(value)
+	loopLabel.text = 'Clones left: ' + str(value)
