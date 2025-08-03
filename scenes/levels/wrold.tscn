@@ -33,9 +33,3 @@ metadata/_edit_lock_ = true
 z_index = 1
 tile_map_data = PackedByteArray("AAAJAAMAAQAAAAAAAgAIAAEAAQAAAAAAAgAHAAEAAQAAAAAAAgAGAAEAAQAAAAAAAgAFAAEAAQAAAAAAAgAJAAEAAQAAAAAAAgAFAAcAAQAAAAAAAwAHAAcAAQAAAAAAAwAJAAcAAQAAAAAAAwAFAAUAAQAAAAAACQAFAAYAAQAAAAAACQAHAAUAAQAAAAAACQAHAAYAAQAAAAAACQAJAAUAAQAAAAAACQAJAAYAAQAAAAAACQAEAAMAAQAAAAAABgADAAMAAQAAAAAABQA=")
 tile_set = ExtResource("4_qf4fh")
-
-[connection signal="body_entered" from="BGTileMapLayer/Button" to="BGTileMapLayer/Button" method="_on_body_entered"]
-[connection signal="body_entered" from="BGTileMapLayer/Area2D" to="BGTileMapLayer/Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="BGTileMapLayer/Area2D" to="BGTileMapLayer/Area2D" method="_on_body_exited"]
-[connection signal="area_entered" from="BGTileMapLayer/BoxPlate" to="BGTileMapLayer/BoxPlate" method="_on_area_entered"]
-[connection signal="area_exited" from="BGTileMapLayer/BoxPlate" to="BGTileMapLayer/BoxPlate" method="_on_area_exited"]

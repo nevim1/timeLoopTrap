@@ -45,18 +45,18 @@ size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="tutorial_popups"]
 layout_mode = 0
-offset_left = 712.0
+offset_left = 705.0
 offset_top = 515.0
-offset_right = 889.0
+offset_right = 882.0
 offset_bottom = 557.0
 theme = ExtResource("4_0qepi")
 text = "This is a box"
 
 [node name="Label2" type="Label" parent="tutorial_popups"]
 layout_mode = 0
-offset_left = 1032.0
+offset_left = 1035.0
 offset_top = 470.0
-offset_right = 1272.0
+offset_right = 1275.0
 offset_bottom = 602.0
 theme = ExtResource("4_0qepi")
 text = "Try to walk into it and see what happens"

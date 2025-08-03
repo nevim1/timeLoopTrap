@@ -45,13 +45,25 @@ size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="tutorial_popups"]
 layout_mode = 0
-offset_left = 531.0
-offset_top = 340.0
-offset_right = 932.0
-offset_bottom = 471.625
+offset_left = 542.0
+offset_top = 320.0
+offset_right = 867.0
+offset_bottom = 452.0
 theme = ExtResource("5_anwe6")
-text = "They say dont push a button if you dont know what it does... unless?"
+text = "They say don't push a button, if you don't know what it does..."
+horizontal_alignment = 1
 autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="tutorial_popups"]
+layout_mode = 0
+offset_left = 547.0
+offset_top = 620.0
+offset_right = 862.0
+offset_bottom = 706.75
+theme = ExtResource("5_anwe6")
+text = "Maybe they're wrong.
+Try it."
+horizontal_alignment = 1
 
 [connection signal="body_entered" from="BGTileMapLayer/Button" to="BGTileMapLayer/Button" method="_on_body_entered"]
 [connection signal="body_entered" from="BGTileMapLayer/Area2D" to="BGTileMapLayer/Area2D" method="win"]

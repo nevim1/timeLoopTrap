@@ -43,7 +43,3 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-
-[connection signal="body_entered" from="BGTileMapLayer/Area2D" to="BGTileMapLayer/Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="BGTileMapLayer/Area2D" to="BGTileMapLayer/Area2D" method="_on_body_exited"]
-[connection signal="body_entered" from="BGTileMapLayer/@Area2D@47207" to="BGTileMapLayer/@Area2D@47207" method="win"]
