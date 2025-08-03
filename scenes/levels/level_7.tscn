@@ -54,7 +54,3 @@ theme = ExtResource("5_d06uk")
 text = "Sometimes you need your clone to go somewhere you can't. Thankfully the machine is portable."
 horizontal_alignment = 1
 autowrap_mode = 2
-
-[connection signal="body_entered" from="BGTileMapLayer/Area2D" to="BGTileMapLayer/Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="BGTileMapLayer/Area2D" to="BGTileMapLayer/Area2D" method="_on_body_exited"]
-[connection signal="body_entered" from="BGTileMapLayer/@Area2D@358776" to="BGTileMapLayer/@Area2D@358776" method="win"]
