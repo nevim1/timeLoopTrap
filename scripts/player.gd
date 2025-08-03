@@ -24,6 +24,21 @@ var remaining_steps : int
 
 var can_create_clones : bool = false
 
+var clone_colors : Array[Color] = [
+	Color(255,0,0),
+	Color(0,0,255),
+	Color(0,255,0),
+	Color(124,0,181),
+	Color(148,209,33),
+	Color(231,114,57),
+	Color(255,40,234),
+	Color(0,255,247),
+	Color(176,98,0),
+	Color(255,27,153),
+	Color(75,249,131),
+	Color(255,234,40),
+]
+
 # Reference to the RayCast2D node
 @onready var ray_cast_2d: RayCast2D = $PlayerRaycast
 @onready var player_sprite : Sprite2D = $PlayerSprite
@@ -112,7 +127,7 @@ func end_loop():
 	if not clone:
 		#level.step_limit = remaining_steps
 		clone = true
-		player_sprite.modulate = Color(0,0.5,1,0.5)
+		player_sprite.modulate = Color(clone_colors[randi()%len(clone_colors)],0.5)
 	
 	position = step_history[0]
 	replay_step = 0
