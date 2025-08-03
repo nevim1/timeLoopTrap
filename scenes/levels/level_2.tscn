@@ -8,7 +8,8 @@
 
 [node name="level" type="Node2D"]
 script = ExtResource("1_ra442")
-step_limit = 16
+loop_limit = 0
+step_limit = 20
 
 [node name="UI" parent="." instance=ExtResource("2_fiq81")]
 z_index = 4
