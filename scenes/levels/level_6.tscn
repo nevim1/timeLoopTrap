@@ -83,7 +83,3 @@ theme = ExtResource("5_i0fhw")
 bbcode_enabled = true
 text = "<-- This Is MY cloning
 	  machine"
-
-[connection signal="body_entered" from="BGTileMapLayer/Area2D" to="BGTileMapLayer/Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="BGTileMapLayer/Area2D" to="BGTileMapLayer/Area2D" method="_on_body_exited"]
-[connection signal="body_entered" from="BGTileMapLayer/@Area2D@32261" to="BGTileMapLayer/@Area2D@32261" method="win"]

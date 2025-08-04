@@ -25,18 +25,18 @@ var remaining_steps : int
 var can_create_clones : bool = false
 
 var clone_colors : Array[Color] = [
-	Color(255,0,0),
-	Color(0,0,255),
-	Color(0,255,0),
-	Color(124,0,181),
-	Color(148,209,33),
-	Color(231,114,57),
-	Color(255,40,234),
-	Color(0,255,247),
-	Color(176,98,0),
-	Color(255,27,153),
-	Color(75,249,131),
-	Color(255,234,40),
+	Color('0000ff'),
+	Color('00ff00'),
+	Color('ff0000'),
+	Color('7c00b5'),
+	Color('94d121'),
+	Color('e77239'),
+	Color('ff28ea'),
+	Color('00fff7'),
+	Color('b06200'),
+	Color('ff1b99'),
+	Color('4bf983'),
+	Color('ffea28'),
 ]
 
 # Reference to the RayCast2D node
