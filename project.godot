@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Timeloop Trap"
 run/main_scene="uid://diapffo61qq3v"
-config/features=PackedStringArray("4.4", "C#", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/bg_color=Color(0.356863, 0.356863, 0.356863, 1)
 boot_splash/image="uid://bekil5dt7rvne"
 config/icon="res://misc/logo.png"
