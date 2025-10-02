@@ -101,6 +101,14 @@ ingame_menu={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="tile map layer"
+2d_physics/layer_2="player"
+2d_physics/layer_3="box and spawner"
+2d_physics/layer_4="door"
+2d_physics/layer_5="wires"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
