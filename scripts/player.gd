@@ -21,7 +21,8 @@ var replay_step : int = 0                            # Index for clone playback
 var push_limit : int = -1
 var remaining_loops : int
 var remaining_steps : int
-var on_canon : bool = false                        # When true: slide / "fast line" movement
+var on_canon : bool = false                        # When true: TP to end movement
+var on_fast_line : bool = false                    # When true: move by 2 movement
 
 var can_create_clones : bool = false
 
