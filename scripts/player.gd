@@ -21,7 +21,7 @@ var replay_step : int = 0                            # Index for clone playback
 var push_limit : int = -1
 var remaining_loops : int
 var remaining_steps : int
-var onFastLine : bool = false                        # When true: slide / "fast line" movement
+var on_canon : bool = false                        # When true: slide / "fast line" movement
 
 var can_create_clones : bool = false
 
@@ -51,7 +51,7 @@ func _can_push(cast: RayCast2D, delta: Vector2) -> bool:
 func move(destination: Vector2) -> bool:
 	if destination == Vector2.ZERO:
 		return true
-	if not onFastLine:
+	if not on_canon:
 		ray_cast_2d.target_position = destination
 		ray_cast_2d.force_raycast_update()
 		if not ray_cast_2d.is_colliding():

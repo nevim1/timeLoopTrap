@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=13 format=3 uid="uid://csuskmmyxj3qe"]
 
-[ext_resource type="PackedScene" uid="uid://beokc3rk4awbf" path="res://scenes/tiles/FastTile.tscn" id="1_wjsah"]
+[ext_resource type="PackedScene" uid="uid://beokc3rk4awbf" path="res://scenes/tiles/Canon.tscn" id="1_wjsah"]
 [ext_resource type="PackedScene" uid="uid://bisqeaom56hen" path="res://scenes/tiles/wires/BLwire.tscn" id="3_caf11"]
 [ext_resource type="PackedScene" uid="uid://dm2x2vcxtj1fc" path="res://scenes/tiles/wires/BRwire.tscn" id="4_4xcoa"]
 [ext_resource type="PackedScene" uid="uid://c80rj1g314ywq" path="res://scenes/tiles/wires/Hwire.tscn" id="5_7ax1q"]
