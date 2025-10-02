@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://bq3ghawm2kc2a"]
+
+[ext_resource type="Script" uid="uid://rctjtdtxhg3x" path="res://scenes/tiles/fast_tile.gd" id="1_obq0f"]
+[ext_resource type="Texture2D" uid="uid://co6otxooslo1r" path="res://assets/tileMap.png" id="2_ypmkd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rcan0"]
+size = Vector2(32, 32)
+
+[node name="FastTile" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_obq0f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-16, -16)
+texture = ExtResource("2_ypmkd")
+centered = false
+region_enabled = true
+region_rect = Rect2(64, 0, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rcan0")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -5.0
+offset_top = -11.0
+offset_right = 5.0
+offset_bottom = 11.333334
+text = ">"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
