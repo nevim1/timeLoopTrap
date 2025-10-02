@@ -4,12 +4,12 @@ Vitek - V
 Samko - S
 Ondra - O
 ## tiles:
-- ice 
+- ice
 - conveyors - V
 - (portal esce) chute - moves from begining to end in 1 turn
 - "fast lane" - S
 - laser/tripwire - S
-- movable cable 
+- movable cable
 - enemy spawner
 - movable floor
 - turret
@@ -18,6 +18,7 @@ Ondra - O
 - ends one loop
 - ends all loops(resets)
 - cuts wires
+
 ---
 
 - level hub?/better level select
@@ -26,7 +27,7 @@ Ondra - O
 - sound effects - V
 - music - V
 - dubbing?
-- ui design 
+- ui design
 - better in-level font - V
 - level scoring (stars)
 - improve art assets(choose theme) - V
@@ -35,3 +36,4 @@ Ondra - O
 - promo art - V
 - improve itch.io page
 - refactor code - O
+- make multilayer tilemap - O
