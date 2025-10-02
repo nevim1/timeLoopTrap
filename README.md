@@ -5,15 +5,15 @@ Samko - S
 Ondra - O
 ## tiles:
 - ice 
-- conveyors
+- conveyors - V
 - (portal esce) chute - moves from begining to end in 1 turn
-- "fast lane"
-- laser/tripwire
+- "fast lane" - S
+- laser/tripwire - S
 - movable cable 
 - enemy spawner
 - movable floor
 - turret
-- bridge(togglable floor)
+- bridge(recycle door)
 ## enemies:
 - ends one loop
 - ends all loops(resets)
@@ -34,4 +34,4 @@ Ondra - O
 - basic code docs/comment
 - promo art - V
 - improve itch.io page
-- refactor code
+- refactor code - O
