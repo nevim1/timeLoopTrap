@@ -22,16 +22,16 @@ const grid_size : int = 32
 
 var clone : bool = false
 
-var step_history : Array[Vector2] = []        # Absolute positions in chronological order
-var step_delta_history : Array[Vector2] = []   # Deltas for each committed move (optional / analytics)
-var replay_step : int = 0                      # Index into step_history for clone playback
+var step_history : Array[Vector2] = []				# Absolute positions in chronological order
+var step_delta_history : Array[Vector2] = []	 # Deltas for each committed move (optional / analytics)
+var replay_step : int = 0											 # Index into step_history for clone playback
 
 var push_limit : int = -1
 var remaining_loops : int
 var remaining_steps : int
 
-var on_canon : bool = false        # Slide infinitely in the chosen direction
-var on_fast_line : bool = false    # Move 2 tiles (or as far as possible up to 2) per input
+var on_canon : bool = false				 # Slide infinitely in the chosen direction
+var on_fast_line : bool = false		 # Move 2 tiles (or as far as possible up to 2) per input
 
 var can_create_clones : bool = false
 
