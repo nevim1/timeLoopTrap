@@ -8,6 +8,7 @@ extends CharacterBody2D
 #  - Support for pushing chains of movable objects implementing move(delta, push_limit)
 #
 
+#{{{  -------- Variables --------
 # Mapping of input actions to direction vectors (grid based)
 const inputs : Dictionary[String, Vector2] = {
 	"move_right": Vector2.RIGHT,
@@ -47,8 +48,9 @@ var clone_colors : Array[Color] = [
 @onready var player_sprite : Sprite2D = $PlayerSprite
 @onready var level_ui = get_tree().get_root().get_node("level/UI")
 @onready var level : Node2D = get_tree().get_root().get_node("level")
+#}}}
 
-# -------- Initialization --------
+#{{{ -------- Initialization --------
 func _ready():
 	remaining_steps = level.step_limit
 	push_limit = level.push_limit
@@ -67,8 +69,9 @@ func _ready():
 func _init_history():
 	step_history.clear()
 	step_history.append(position)
+#}}}
 
-# -------- Movement Helpers --------
+#{{{ -------- Movement Helpers --------
 func _can_push(cast: RayCast2D, delta: Vector2) -> bool:
 	var collider = cast.get_collider()
 	if collider and "move" in collider:
@@ -78,7 +81,9 @@ func _can_push(cast: RayCast2D, delta: Vector2) -> bool:
 func _setup_raycast(delta: Vector2):
 	ray_cast_2d.target_position = delta
 	ray_cast_2d.force_raycast_update()
+#}}}
 
+#{{{ -------- Movement --------
 # Attempt a single-tile step (delta must be exactly one grid cell vector or Vector2.ZERO).
 # Returns true if movement (or push + movement) succeeded.
 func _attempt_single_step(delta: Vector2) -> bool:
@@ -164,8 +169,9 @@ func move(destination: Vector2) -> bool:
 		return _attempt_multi_tile(destination)
 
 	return _attempt_single_step(destination)
+#}}}
 
-# -------- Input Handling --------
+#{{{ -------- Input Handling --------
 func _unhandled_input(event: InputEvent) -> void:
 	if clone:
 		return
@@ -190,8 +196,9 @@ func _unhandled_input(event: InputEvent) -> void:
 				level_ui.update_steps(remaining_steps)
 				level.force_step()
 			return
+#}}}
 
-# -------- Temporal / Loop Control --------
+#{{{ -------- Temporal / Loop Control --------
 func undo():
 	if clone:
 		replay_step -= 1
@@ -209,8 +216,7 @@ func undo():
 			level_ui.update_steps(remaining_steps)
 
 func end_loop():
-	if not clone:
-		clone = true
+	if not clone: clone = true
 		player_sprite.modulate = Color(clone_colors[randi() % clone_colors.size()], 0.5)
 	position = step_history[0]
 	replay_step = 0
@@ -231,3 +237,4 @@ func reset_loop():
 		remaining_steps += step_history.size() - 1
 		level_ui.update_steps(remaining_steps)
 		_init_history()
+#}}}
