@@ -8,7 +8,7 @@ extends CharacterBody2D
 #  - Support for pushing chains of movable objects implementing move(delta, push_limit)
 #
 
-#{{{  -------- Variables --------
+#{{{	-------- Variables --------
 # Mapping of input actions to direction vectors (grid based)
 const inputs : Dictionary[String, Vector2] = {
 	"move_right": Vector2.RIGHT,
@@ -216,7 +216,8 @@ func undo():
 			level_ui.update_steps(remaining_steps)
 
 func end_loop():
-	if not clone: clone = true
+	if not clone:
+		clone = true
 		player_sprite.modulate = Color(clone_colors[randi() % clone_colors.size()], 0.5)
 	position = step_history[0]
 	replay_step = 0
