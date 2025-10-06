@@ -1,8 +1,12 @@
 # todo:
 legend:
+
 Vitek - V
+
 Samko - S
+
 Ondra - O
+
 ## tiles:
 - ice
 - conveyors - V
@@ -22,6 +26,7 @@ Ondra - O
 ---
 
 - level hub?/better level select
+- automatically add levels to level select
 - tutorial revision
 - new levels + reorganize for better diff scaling
 - sound effects - V
