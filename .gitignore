@@ -22,3 +22,5 @@ mono_crash.*.json
 
 # Ignore temporary files
 *.tmp
+# temp image save for krita(probably)
+*.png~

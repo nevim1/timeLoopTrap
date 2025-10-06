@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://cyf2yyuixjkaw"]
+
+[node name="signal_reciever" type="Node"]
