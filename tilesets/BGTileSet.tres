@@ -1,7 +1,8 @@
-[gd_resource type="TileSet" load_steps=8 format=3 uid="uid://neku2qaay4mt"]
+[gd_resource type="TileSet" load_steps=9 format=3 uid="uid://neku2qaay4mt"]
 
 [ext_resource type="Texture2D" uid="uid://co6otxooslo1r" path="res://assets/tileMap.png" id="1_q0fwr"]
 [ext_resource type="PackedScene" uid="uid://bphwnm0fjwu0v" path="res://scenes/tiles/player_plate.tscn" id="2_0eo6y"]
+[ext_resource type="PackedScene" uid="uid://bq3ghawm2kc2a" path="res://scenes/tiles/fast_tile.tscn" id="3_0eo6y"]
 [ext_resource type="PackedScene" uid="uid://i5osvdp71ysm" path="res://scenes/tiles/finish_line.tscn" id="3_bmx5o"]
 [ext_resource type="PackedScene" uid="uid://bg856vrhcbhid" path="res://scenes/tiles/button.tscn" id="4_37xtr"]
 [ext_resource type="PackedScene" uid="uid://ba7mlcoqdsy3p" path="res://scenes/tiles/box_plate.tscn" id="5_3gjil"]
@@ -209,6 +210,7 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_g2hbc"]
 scenes/1/scene = ExtResource("2_0eo6y")
+scenes/2/scene = ExtResource("3_0eo6y")
 scenes/4/scene = ExtResource("3_bmx5o")
 scenes/7/scene = ExtResource("4_37xtr")
 scenes/8/scene = ExtResource("5_3gjil")
