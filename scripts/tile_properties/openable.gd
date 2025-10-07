@@ -1,1 +1,1 @@
-extends module
+extends Module
