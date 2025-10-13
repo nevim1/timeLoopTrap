@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://gkli32534vtn"]
+
+[ext_resource type="Script" uid="uid://c2e7o88fcq3xc" path="res://scripts/box_plate.gd" id="1_ygla3"]
+[ext_resource type="Texture2D" uid="uid://co6otxooslo1r" path="res://assets/tileMap.png" id="2_qoaxk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oxbv2"]
+size = Vector2(32, 32)
+
+[node name="BoxPlate" type="Area2D"]
+collision_layer = 0
+collision_mask = 20
+script = ExtResource("1_ygla3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-16, -16)
+texture = ExtResource("2_qoaxk")
+centered = false
+region_enabled = true
+region_rect = Rect2(160, 0, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_oxbv2")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

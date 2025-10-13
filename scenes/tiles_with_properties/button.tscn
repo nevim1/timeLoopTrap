@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://c35xk3cmqxhrf"]
+
+[ext_resource type="Script" uid="uid://bvjkounteftvr" path="res://scripts/button.gd" id="1_n0633"]
+[ext_resource type="Texture2D" uid="uid://co6otxooslo1r" path="res://assets/tileMap.png" id="2_2rqaj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xb3yb"]
+size = Vector2(32, 32)
+
+[node name="Button" type="Area2D"]
+collision_layer = 0
+collision_mask = 18
+script = ExtResource("1_n0633")
+
+[node name="ButtonCollider" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_xb3yb")
+
+[node name="ButtonSprite" type="Sprite2D" parent="."]
+position = Vector2(-16, -16)
+texture = ExtResource("2_2rqaj")
+centered = false
+vframes = 2
+region_enabled = true
+region_rect = Rect2(192, 32, 32, 65)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

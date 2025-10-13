@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cswcbtwyg4ejp"]
-
-[ext_resource type="Script" uid="uid://7iok5mk1rt8n" path="res://scripts/tile_properties/victory.gd" id="1_52aik"]
-
-[node name="victory" type="Node"]
-script = ExtResource("1_52aik")

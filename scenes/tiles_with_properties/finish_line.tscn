@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://brrhi4o2a0ie4"]
+
+[ext_resource type="Script" uid="uid://cadkpeqmrctin" path="res://scripts/finish_line.gd" id="1_1swdu"]
+[ext_resource type="Texture2D" uid="uid://co6otxooslo1r" path="res://assets/tileMap.png" id="2_iuy6u"]
+[ext_resource type="PackedScene" uid="uid://cswcbtwyg4ejp" path="res://scenes/tile_properties/finish.tscn" id="3_iuy6u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_05ejo"]
+size = Vector2(32, 32)
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_1swdu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-16, -16)
+texture = ExtResource("2_iuy6u")
+centered = false
+region_enabled = true
+region_rect = Rect2(64, 0, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_05ejo")
+
+[node name="victory" parent="." instance=ExtResource("3_iuy6u")]
+
+[connection signal="body_entered" from="." to="." method="win"]

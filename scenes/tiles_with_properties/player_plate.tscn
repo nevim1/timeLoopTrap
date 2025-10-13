@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://2n1yeiw8f7ns"]
+
+[ext_resource type="Script" uid="uid://h54m042frvpo" path="res://scripts/player_plate.gd" id="1_qlmd3"]
+[ext_resource type="Texture2D" uid="uid://co6otxooslo1r" path="res://assets/tileMap.png" id="2_svbns"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cxf1g"]
+size = Vector2(32, 32)
+
+[node name="Area2D" type="Area2D"]
+z_index = -1
+collision_layer = 0
+collision_mask = 18
+script = ExtResource("1_qlmd3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-16, -16)
+texture = ExtResource("2_svbns")
+centered = false
+region_enabled = true
+region_rect = Rect2(192, 0, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_cxf1g")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

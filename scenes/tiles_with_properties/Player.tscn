@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5rbwvdqe2ktl"]
+
+[ext_resource type="Script" uid="uid://dgwf2hlisxns1" path="res://scripts/player.gd" id="1_l7b6n"]
+[ext_resource type="Texture2D" uid="uid://co6otxooslo1r" path="res://assets/tileMap.png" id="2_01kui"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kpjcp"]
+size = Vector2(30, 30)
+
+[node name="Player" type="CharacterBody2D"]
+z_index = 1
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_l7b6n")
+
+[node name="PlayerCollider" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_kpjcp")
+
+[node name="PlayerSprite" type="Sprite2D" parent="."]
+modulate = Color(0, 0.501961, 1, 1)
+z_index = 2
+texture = ExtResource("2_01kui")
+region_enabled = true
+region_rect = Rect2(32, 0, 32, 32)
+
+[node name="RayCastFast" type="RayCast2D" parent="."]
+target_position = Vector2(0, 64)
+collision_mask = 13
+hit_from_inside = true
+collide_with_areas = true
+
+[node name="PlayerRaycast" type="RayCast2D" parent="."]
+target_position = Vector2(0, 32)
+collision_mask = 13
+hit_from_inside = true
+collide_with_areas = true
