@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://cvngv1r7ejelt"]
+[gd_scene load_steps=2 format=3 uid="uid://cvngv1r7ejelt"]
+
+[ext_resource type="Script" uid="uid://dfg45ydtdw7uu" path="res://scripts/tile_properties/push_source.gd" id="1_y0vkh"]
 
 [node name="push_source" type="Node"]
+script = ExtResource("1_y0vkh")

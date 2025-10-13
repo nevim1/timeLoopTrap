@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://b3a3rpwgi8i46"]
+[gd_scene load_steps=2 format=3 uid="uid://b3a3rpwgi8i46"]
+
+[ext_resource type="Script" uid="uid://bvda6qggjd0du" path="res://scripts/tile_properties/openable.gd" id="1_72kqs"]
 
 [node name="openable" type="Node"]
+script = ExtResource("1_72kqs")

@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://b1nbdvnp0hm3t"]
+[gd_scene load_steps=2 format=3 uid="uid://b1nbdvnp0hm3t"]
+
+[ext_resource type="Script" uid="uid://cymwr1p5fs12t" path="res://scripts/tile_properties/player_spawner.gd" id="1_davxa"]
 
 [node name="player_spawner" type="Node"]
+script = ExtResource("1_davxa")

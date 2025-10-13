@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://dijhr7p1q8xf8"]
+[gd_scene load_steps=2 format=3 uid="uid://dijhr7p1q8xf8"]
+
+[ext_resource type="Script" uid="uid://dmcowt5ev146s" path="res://scripts/tile_properties/signal_source.gd" id="1_yfqqj"]
 
 [node name="signal_source" type="Node"]
+script = ExtResource("1_yfqqj")

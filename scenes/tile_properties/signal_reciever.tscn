@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://cyf2yyuixjkaw"]
+[gd_scene load_steps=2 format=3 uid="uid://cyf2yyuixjkaw"]
+
+[ext_resource type="Script" uid="uid://bfmll0v88jjxl" path="res://scripts/tile_properties/signal_reciever.gd" id="1_seoa6"]
 
 [node name="signal_reciever" type="Node"]
+script = ExtResource("1_seoa6")

@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://d4ahfon4iwudj"]
+[gd_scene load_steps=2 format=3 uid="uid://d4ahfon4iwudj"]
+
+[ext_resource type="Script" uid="uid://cbwb6xfohj4n" path="res://scripts/tile_properties/player_input.gd" id="1_40u0d"]
 
 [node name="player_input" type="Node"]
+script = ExtResource("1_40u0d")

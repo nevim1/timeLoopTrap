@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://cmr6hpnm6dcri"]
+[gd_scene load_steps=2 format=3 uid="uid://cmr6hpnm6dcri"]
+
+[ext_resource type="Script" uid="uid://cmge1c11xwfck" path="res://scripts/tile_properties/push_reciever.gd" id="1_1b3pa"]
 
 [node name="push_reciever" type="Node"]
+script = ExtResource("1_1b3pa")

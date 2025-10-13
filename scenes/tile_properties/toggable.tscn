@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://c7k7yl2cwactp"]
+[gd_scene load_steps=2 format=3 uid="uid://c7k7yl2cwactp"]
+
+[ext_resource type="Script" uid="uid://b080ku2evisxc" path="res://scripts/tile_properties/toggable.gd" id="1_ylkph"]
 
 [node name="toggable" type="Node"]
+script = ExtResource("1_ylkph")
