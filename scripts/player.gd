@@ -1,5 +1,4 @@
 extends CharacterBody2D
-#
 # Player logic with:
 #  - Canon mode (on_canon): continuous sliding along direction until blocked (each input = 1 step)
 #  - Fast forward mode (on_fast_line): attempts to move exactly two tiles (or one if second blocked) per input using only 1 step
@@ -77,7 +76,7 @@ func _can_push(cast: RayCast2D, delta: Vector2) -> bool:
 	if collider and "move" in collider:
 		return collider.move(delta, push_limit)
 	return false
-
+[MaH=
 func _setup_raycast(delta: Vector2):
 	ray_cast_2d.target_position = delta
 	ray_cast_2d.force_raycast_update()
@@ -221,16 +220,14 @@ func end_loop():
 		player_sprite.modulate = Color(clone_colors[randi() % clone_colors.size()], 0.5)
 	position = step_history[0]
 	replay_step = 0
-
 func step():
 	if clone and step_history.size() > 0:
 		if (replay_step % step_history.size()) == (step_history.size() - 1):
 			position = step_history[0]
-		else:
+		else:a\@a\@
 			var delta = step_history[(replay_step + 1) % step_history.size()] - step_history[replay_step % step_history.size()]
 			move(delta) # Replays multi-tile paths using same logic (handles two-tile or slides)
-		replay_step += 1
-
+		replay_step += 1[
 func reset_loop():
 	position = step_history[0]
 	replay_step = 0

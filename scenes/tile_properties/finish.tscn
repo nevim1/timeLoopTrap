@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" uid="uid://dxcnxadehekst" path="res://scripts/tile_properties/finish.gd" id="1_tsoq8"]
 
-[node name="victory" type="Node"]
+[node name="finish" type="Node"]
 script = ExtResource("1_tsoq8")
