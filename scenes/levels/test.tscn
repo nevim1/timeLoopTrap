@@ -1,3 +1,7 @@
-[gd_scene format=3 uid="uid://cqarqh3kpjei7"]
+[gd_scene load_steps=2 format=3 uid="uid://cqarqh3kpjei7"]
 
-[node name="Test" type="Node2D"]
+[ext_resource type="PackedScene" uid="uid://brrhi4o2a0ie4" path="res://scenes/tiles_with_properties/finish_line.tscn" id="1_8153q"]
+
+[node name="level" type="Node2D"]
+
+[node name="Area2D" parent="." instance=ExtResource("1_8153q")]

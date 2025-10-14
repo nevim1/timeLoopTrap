@@ -5,7 +5,7 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qmo5l"]
 
-[node name="Area2D" type="Area2D"]
+[node name="Conveyor" type="Area2D"]
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_5jpi5")
