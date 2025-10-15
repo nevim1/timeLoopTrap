@@ -66,6 +66,14 @@ theme_override_font_sizes/font_size = 18
 text = "VeejayIam"
 horizontal_alignment = 1
 
+[node name="Ponesicek" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/names"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme = ExtResource("2_41cr8")
+theme_override_font_sizes/font_size = 18
+text = "ponesicek"
+horizontal_alignment = 1
+
 [node name="itch profiles" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
@@ -86,6 +94,15 @@ theme_override_font_sizes/font_size = 18
 action_mode = 0
 text = "itch profile"
 uri = "https://veejayiam.itch.io/"
+
+[node name="ponesicek itch link" type="LinkButton" parent="MarginContainer/VBoxContainer/HBoxContainer/itch profiles"]
+layout_mode = 2
+theme = ExtResource("2_41cr8")
+theme_override_colors/font_color = Color(0.567622, 0.708996, 1, 1)
+theme_override_font_sizes/font_size = 18
+action_mode = 0
+text = "itch profile"
+uri = "https://ponesicek.itch.io/"
 
 [node name="VSeparator" type="VSeparator" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(10, 0)
@@ -111,6 +128,15 @@ theme_override_font_sizes/font_size = 18
 action_mode = 0
 text = "github profile"
 uri = "https://github.com/VeejayIam"
+
+[node name="ponesicek git link" type="LinkButton" parent="MarginContainer/VBoxContainer/HBoxContainer/github profiles"]
+layout_mode = 2
+theme = ExtResource("2_41cr8")
+theme_override_colors/font_color = Color(0.568627, 0.709804, 1, 1)
+theme_override_font_sizes/font_size = 18
+action_mode = 0
+text = "github profile"
+uri = "https://github.com/Ponesicek"
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
