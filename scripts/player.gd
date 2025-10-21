@@ -76,7 +76,6 @@ func _can_push(cast: RayCast2D, delta: Vector2) -> bool:
 	if collider and "move" in collider:
 		return collider.move(delta, push_limit)
 	return false
-[MaH=
 func _setup_raycast(delta: Vector2):
 	ray_cast_2d.target_position = delta
 	ray_cast_2d.force_raycast_update()
@@ -224,10 +223,10 @@ func step():
 	if clone and step_history.size() > 0:
 		if (replay_step % step_history.size()) == (step_history.size() - 1):
 			position = step_history[0]
-		else:a\@a\@
+		else:
 			var delta = step_history[(replay_step + 1) % step_history.size()] - step_history[replay_step % step_history.size()]
 			move(delta) # Replays multi-tile paths using same logic (handles two-tile or slides)
-		replay_step += 1[
+		replay_step += 1
 func reset_loop():
 	position = step_history[0]
 	replay_step = 0
