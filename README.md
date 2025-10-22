@@ -7,6 +7,19 @@ Samko - S
 
 Ondra - O
 
+## tiles for rewrite:
+
+- [x] finish.gd
+- [x] openable.gd
+- [ ] push\_reciever.gd
+- [ ] signal\_source.gd
+- [ ] hitbox\_detection.gd
+- [ ] player\_input.gd
+- [ ] push\_source.gd
+- [ ] toggable.gd
+- [ ] player\_spawner.gd
+- [ ] signal\_reciever.gd
+
 ## tiles:
 - ice
 - conveyors - V
