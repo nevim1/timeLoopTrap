@@ -1,11 +1,15 @@
 # todo:
 legend:
 
-Vitek - V
+Vítek - V
 
 Samko - S
 
 Ondra - O
+
+## Questions to answer
+- do we want push limit?
+- have undo-related thing in its own module?
 
 ## tiles for rewrite:
 
