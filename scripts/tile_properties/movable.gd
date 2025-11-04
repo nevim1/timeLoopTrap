@@ -3,12 +3,7 @@ extends Module
 @onready var ray_cast_2d : RayCast2D = $MoveRaycast
 signal moved
 
-func move(destination : Vector2, limit : int):
-	if limit > -1:
-		limit -= 1
-		if limit < 0:
-			return false
-	
+func move(destination : Vector2):
 	ray_cast_2d.target_position = destination
 	ray_cast_2d.force_raycast_update()
 
