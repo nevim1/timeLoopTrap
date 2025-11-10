@@ -14,7 +14,7 @@ func move(destination : Vector2):
 	elif ray_cast_2d.get_collision_mask_value(3):
 		var movable = ray_cast_2d.get_collider()
 		if 'move' in movable:
-			if movable.move(destination, limit):
+			if movable.move(destination):
 				parent.position += destination
 			else:
 				return false
